@@ -1,0 +1,2122 @@
+fileFormatVersion: 2
+guid: b580a83428929d44ea220b71b5adc1d5
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: ogre warrior - export_Frame_0
+    originalName: 
+    pivot: {x: 0.37142855, y: -1.5416666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 384
+      width: 35
+      height: 24
+    spriteID: a8f993f2f6ef96a469df84f5158edb6f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 384}
+  - name: ogre warrior - export_Frame_1
+    originalName: 
+    pivot: {x: 0.37142855, y: -1.6086956}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 108
+      width: 35
+      height: 23
+    spriteID: 0b8f4c126413b8a42b5f0c5ce293c8e4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 108}
+  - name: ogre warrior - export_Frame_2
+    originalName: 
+    pivot: {x: 0.37142855, y: -1.6086956}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 139
+      width: 35
+      height: 23
+    spriteID: de623879b88cfe545878937181502b56
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 139}
+  - name: ogre warrior - export_Frame_3
+    originalName: 
+    pivot: {x: 0.38235292, y: -1.6818182}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 232
+      width: 34
+      height: 22
+    spriteID: 92e528aeedb8d3045bc5d3ed106256a2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 232}
+  - name: ogre warrior - export_Frame_4
+    originalName: 
+    pivot: {x: 0.38235292, y: -1.6086956}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 201
+      width: 34
+      height: 23
+    spriteID: 94aaa79d480f5a4499c026c78e63086a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 201}
+  - name: ogre warrior - export_Frame_5
+    originalName: 
+    pivot: {x: 0.37142855, y: -1.6086956}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 170
+      width: 35
+      height: 23
+    spriteID: 720ca9eafd98543459ab72bc5cccfbab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 170}
+  - name: ogre warrior - export_Frame_6
+    originalName: 
+    pivot: {x: 0.5416666, y: -1.7727274}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 369
+      width: 24
+      height: 22
+    spriteID: ab1af94243274df47be40a5f69252530
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 369}
+  - name: ogre warrior - export_Frame_7
+    originalName: 
+    pivot: {x: 0.5416666, y: -1.8571429}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 399
+      width: 24
+      height: 21
+    spriteID: 53619b5d44ebfd440a75b14e3efe06d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 399}
+  - name: ogre warrior - export_Frame_8
+    originalName: 
+    pivot: {x: 0.5416666, y: -1.8571429}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 428
+      width: 24
+      height: 21
+    spriteID: 1708583e6cdac9d4dba37862ff246341
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 428}
+  - name: ogre warrior - export_Frame_9
+    originalName: 
+    pivot: {x: 0.5416666, y: -1.95}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 55
+      width: 24
+      height: 20
+    spriteID: 73122ea32a1e0ae49bfd4996c263995f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 55}
+  - name: ogre warrior - export_Frame_10
+    originalName: 
+    pivot: {x: 0.5416666, y: -1.8571429}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 457
+      width: 24
+      height: 21
+    spriteID: 37017d98c49a85a4a9793529ac0a621c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 457}
+  - name: ogre warrior - export_Frame_11
+    originalName: 
+    pivot: {x: 0.5416666, y: -1.8571429}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 486
+      width: 24
+      height: 21
+    spriteID: 6475628d12e11eb4a9ec13b959e01bbc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 486}
+  - name: ogre warrior - export_Frame_12
+    originalName: 
+    pivot: {x: 0.30303028, y: -1.7727274}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 262
+      width: 33
+      height: 22
+    spriteID: b22ee378967ab414b9174db58757ba3f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 262}
+  - name: ogre warrior - export_Frame_13
+    originalName: 
+    pivot: {x: 0.28125, y: -1.95}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 260
+      width: 32
+      height: 20
+    spriteID: d2a82b44dc7c1924080214e13cbcf93c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 260}
+  - name: ogre warrior - export_Frame_14
+    originalName: 
+    pivot: {x: 0.3, y: -2.1666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 343
+      width: 30
+      height: 18
+    spriteID: 96cef342f59947140831f4e4a71c31b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 343}
+  - name: ogre warrior - export_Frame_15
+    originalName: 
+    pivot: {x: 0.31249997, y: -1.95}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 288
+      width: 32
+      height: 20
+    spriteID: 5c969d7110d410f4e9b4303a64e63dce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 288}
+  - name: ogre warrior - export_Frame_16
+    originalName: 
+    pivot: {x: 0.30303028, y: -1.7727274}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 292
+      width: 33
+      height: 22
+    spriteID: 471c4b1c784c1814f8c31a0fdc6c36f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 292}
+  - name: ogre warrior - export_Frame_17
+    originalName: 
+    pivot: {x: 0.30303028, y: -1.7727274}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 322
+      width: 33
+      height: 22
+    spriteID: 122a11f84268daa42816739f6ef87fbe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 322}
+  - name: ogre warrior - export_Frame_18
+    originalName: 
+    pivot: {x: 0.32352945, y: -1.8571429}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 352
+      width: 34
+      height: 21
+    spriteID: cb9372d4df9571f4a96f16b23fafcaeb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 352}
+  - name: ogre warrior - export_Frame_19
+    originalName: 
+    pivot: {x: 0.30303028, y: -1.95}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 437
+      width: 33
+      height: 20
+    spriteID: 07f18bb78d68b2444afff7ce1bdd61ec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 437}
+  - name: ogre warrior - export_Frame_20
+    originalName: 
+    pivot: {x: 0.30303028, y: -2.0526314}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 316
+      width: 33
+      height: 19
+    spriteID: 8819cc950b8fcdf4381384c8d8a8e48b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 316}
+  - name: ogre warrior - export_Frame_21
+    originalName: 
+    pivot: {x: 0.30303028, y: -1.95}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 465
+      width: 33
+      height: 20
+    spriteID: 3e5804dd580906f42b1c42d556776322
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 465}
+  - name: ogre warrior - export_Frame_22
+    originalName: 
+    pivot: {x: 0.32352945, y: -1.8571429}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 381
+      width: 34
+      height: 21
+    spriteID: abc7ded0789e0004bad6b9248f8d4e42
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 381}
+  - name: ogre warrior - export_Frame_23
+    originalName: 
+    pivot: {x: 0.47619045, y: -1.7727274}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 83
+      width: 21
+      height: 22
+    spriteID: b5cce3ecf277cf74b89860af9c4dc7f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 83}
+  - name: ogre warrior - export_Frame_24
+    originalName: 
+    pivot: {x: 0.4736842, y: -1.95}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 229
+      width: 19
+      height: 20
+    spriteID: 6820afc68507006489c41efc1c2a4825
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 229}
+  - name: ogre warrior - export_Frame_25
+    originalName: 
+    pivot: {x: 0.4736842, y: -2.1666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 285
+      width: 19
+      height: 18
+    spriteID: 798e3c3f605154a49a1165e1081b1617
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 285}
+  - name: ogre warrior - export_Frame_26
+    originalName: 
+    pivot: {x: 0.49999997, y: -1.95}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 201
+      width: 20
+      height: 20
+    spriteID: af0f90061457b5444802b3f6b400e98c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 201}
+  - name: ogre warrior - export_Frame_27
+    originalName: 
+    pivot: {x: 0.47619045, y: -1.7727274}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 113
+      width: 21
+      height: 22
+    spriteID: 4006b1d92abbd8c4ca480b8b8aa01a69
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 113}
+  - name: ogre warrior - export_Frame_28
+    originalName: 
+    pivot: {x: 0.49999997, y: -1.7727274}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 186
+      width: 20
+      height: 22
+    spriteID: 6f1ca508041e3be4e8b92d7d24565edd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 186}
+  - name: ogre warrior - export_Frame_29
+    originalName: 
+    pivot: {x: 0.5500001, y: -1.8571429}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 143
+      width: 20
+      height: 21
+    spriteID: 61d520112e0570648b055778b3667af4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 143}
+  - name: ogre warrior - export_Frame_30
+    originalName: 
+    pivot: {x: 0.5555555, y: -1.95}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 260
+      width: 18
+      height: 20
+    spriteID: bfd0ec34b8e7f804bbe7809fc36e385e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 260}
+  - name: ogre warrior - export_Frame_31
+    originalName: 
+    pivot: {x: 0.58823526, y: -2.0526314}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 384
+      width: 17
+      height: 19
+    spriteID: 05ee4c9b2cd279340bb860f6b236c451
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 384}
+  - name: ogre warrior - export_Frame_32
+    originalName: 
+    pivot: {x: 0.5555555, y: -1.95}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 257
+      width: 18
+      height: 20
+    spriteID: f3f138d5094318242b8ae5a41ee0dd57
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 257}
+  - name: ogre warrior - export_Frame_33
+    originalName: 
+    pivot: {x: 0.5500001, y: -1.8571429}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 172
+      width: 20
+      height: 21
+    spriteID: 838a40bb77fcd5f4393ce4061cc04064
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 172}
+  - name: ogre warrior - export_Frame_34
+    originalName: 
+    pivot: {x: 0.3611111, y: -1.7727274}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 34
+      width: 36
+      height: 22
+    spriteID: 740faf22136411449ba96db926b64af1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 34}
+  - name: ogre warrior - export_Frame_35
+    originalName: 
+    pivot: {x: 0.37142855, y: -1.4444444}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 225
+      width: 35
+      height: 27
+    spriteID: 6da6fd197df6ad04bad66fc8f21fa886
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 225}
+  - name: ogre warrior - export_Frame_36
+    originalName: 
+    pivot: {x: 0.43750003, y: -1.2580645}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 186
+      width: 32
+      height: 31
+    spriteID: 3c786421c45993346b3836e19eeaac85
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 186}
+  - name: ogre warrior - export_Frame_37
+    originalName: 
+    pivot: {x: 0.53846157, y: -1.21875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 68
+      width: 26
+      height: 32
+    spriteID: 2dc5239cc93796a4495ae7f639a13405
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 68}
+  - name: ogre warrior - export_Frame_38
+    originalName: 
+    pivot: {x: 0.25490195, y: -1.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 67
+      width: 51
+      height: 24
+    spriteID: 8b88fe2a187fc684d82f6d1ae2f26ad7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 67}
+  - name: ogre warrior - export_Frame_39
+    originalName: 
+    pivot: {x: 0.22413792, y: -1.652174}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 36
+      width: 58
+      height: 23
+    spriteID: 203046493f82e0f4cb2701eeea8ff430
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 36}
+  - name: ogre warrior - export_Frame_40
+    originalName: 
+    pivot: {x: 0.21666665, y: -1.5416666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 60
+      height: 24
+    spriteID: 5b8861176f7969d468fd288af76b4f87
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: ogre warrior - export_Frame_41
+    originalName: 
+    pivot: {x: 0.23636362, y: -1.7619048}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 99
+      width: 55
+      height: 21
+    spriteID: 2e7c93011adf3da4cafa4806ae3b93bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 99}
+  - name: ogre warrior - export_Frame_42
+    originalName: 
+    pivot: {x: 0.23636362, y: -1.7619048}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 128
+      width: 55
+      height: 21
+    spriteID: 3d970216756bf5f4eb3fee6b88f2e8c6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 128}
+  - name: ogre warrior - export_Frame_43
+    originalName: 
+    pivot: {x: 0.24074073, y: -1.7619048}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 157
+      width: 54
+      height: 21
+    spriteID: bb1d39a55c0021644a8b5bda16ba242a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 157}
+  - name: ogre warrior - export_Frame_44
+    originalName: 
+    pivot: {x: 0.3421052, y: -1.6818182}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 4
+      width: 38
+      height: 22
+    spriteID: 25265c52b7c49f140bad128dc812e847
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 4}
+  - name: ogre warrior - export_Frame_45
+    originalName: 
+    pivot: {x: 0.37142855, y: -1.5416666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 416
+      width: 35
+      height: 24
+    spriteID: d58bebe0f9db6f54cb97c1778b3873b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 416}
+  - name: ogre warrior - export_Frame_46
+    originalName: 
+    pivot: {x: 0.37142855, y: -1.5416666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 448
+      width: 35
+      height: 24
+    spriteID: bec5c9d9286e35a45b2104f237161392
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 448}
+  - name: ogre warrior - export_Frame_47
+    originalName: 
+    pivot: {x: 0.37142855, y: -1.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 480
+      width: 35
+      height: 24
+    spriteID: 874244263eb55774c82df3e7aa3217f5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 480}
+  - name: ogre warrior - export_Frame_48
+    originalName: 
+    pivot: {x: 0.3611111, y: -1.8571429}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 122
+      width: 36
+      height: 21
+    spriteID: bb806ae94a167534d88169fef54fdcb6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 122}
+  - name: ogre warrior - export_Frame_49
+    originalName: 
+    pivot: {x: 0.38888893, y: -2.0526314}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 206
+      width: 36
+      height: 19
+    spriteID: 2f4817a633a3ed6419f361a0a9807cb5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 206}
+  - name: ogre warrior - export_Frame_50
+    originalName: 
+    pivot: {x: 0.38888893, y: -1.95}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 151
+      width: 36
+      height: 20
+    spriteID: e199b4027a72e0841b78f876cae4fc49
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 151}
+  - name: ogre warrior - export_Frame_51
+    originalName: 
+    pivot: {x: 0.37142855, y: -1.5416666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 4
+      width: 35
+      height: 24
+    spriteID: 891f9da3bf518f14090a66c2e5a34c36
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 4}
+  - name: ogre warrior - export_Frame_52
+    originalName: 
+    pivot: {x: 0.37142855, y: -1.5416666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 36
+      width: 35
+      height: 24
+    spriteID: e6107e04466a1d848bdb6f9a8a6e5dfb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 36}
+  - name: ogre warrior - export_Frame_53
+    originalName: 
+    pivot: {x: 0.38235292, y: -1.4074074}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 260
+      width: 34
+      height: 27
+    spriteID: 354434ee31abbe44ea5e23d58d00199e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 260}
+  - name: ogre warrior - export_Frame_54
+    originalName: 
+    pivot: {x: 0.37142855, y: -1.4230769}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 295
+      width: 35
+      height: 26
+    spriteID: d82d73021dec5bd4380b80f4184a843a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 295}
+  - name: ogre warrior - export_Frame_55
+    originalName: 
+    pivot: {x: 0.35135132, y: -1.8095239}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 64
+      width: 37
+      height: 21
+    spriteID: 73c53d57f00ea2444a77e742c76d094a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 64}
+  - name: ogre warrior - export_Frame_56
+    originalName: 
+    pivot: {x: 0.35135132, y: -2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 179
+      width: 37
+      height: 19
+    spriteID: 70eb2c3c27f46ff40bb4b18dda70fcc2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 179}
+  - name: ogre warrior - export_Frame_57
+    originalName: 
+    pivot: {x: 0.35135132, y: -1.8095239}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 93
+      width: 37
+      height: 21
+    spriteID: 720c95a87997acb42ad1c7319f78c29b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 93}
+  - name: ogre warrior - export_Frame_58
+    originalName: 
+    pivot: {x: 0.34285715, y: -2.0526314}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 410
+      width: 35
+      height: 19
+    spriteID: 6ae1c907f18e55c4c8b547ac2a05c18e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 410}
+  - name: ogre warrior - export_Frame_59
+    originalName: 
+    pivot: {x: 0.29411763, y: -2.0526314}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 233
+      width: 34
+      height: 19
+    spriteID: 152b701ac63630342821faabaa00ecea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 233}
+  - name: ogre warrior - export_Frame_60
+    originalName: 
+    pivot: {x: 0.25806454, y: -2.1666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 215
+      y: 4
+      width: 31
+      height: 18
+    spriteID: 1892fc952a4f75c46ac0a14b9d9827bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 215, y: 4}
+  - name: ogre warrior - export_Frame_61
+    originalName: 
+    pivot: {x: 0.12195124, y: -2.1764705}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 30
+      width: 41
+      height: 17
+    spriteID: fc539eb84627ad44d943c61473363b7a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 30}
+  - name: ogre warrior - export_Frame_62
+    originalName: 
+    pivot: {x: 0.11111114, y: -1.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 329
+      width: 45
+      height: 20
+    spriteID: 9dc6ce564b51f7a4db26e6e2a90de0c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 329}
+  - name: ogre warrior - export_Frame_63
+    originalName: 
+    pivot: {x: 0.10869567, y: -2.0555556}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 4
+      width: 46
+      height: 18
+    spriteID: 89195348c96dbfe4286f0b758d1ab954
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 4}
+  - name: ogre warrior - export_Frame_64
+    originalName: 
+    pivot: {x: 0.106382996, y: -1.9473683}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 357
+      width: 47
+      height: 19
+    spriteID: a3d55af2bc45ef44380f4699cf976669
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 357}
+  - name: ogre warrior - export_Frame_65
+    originalName: 
+    pivot: {x: 0.1666667, y: -3.3636365}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 493
+      width: 30
+      height: 11
+    spriteID: bd46bacc900744d43af4ce0cdb63b97d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 493}
+  - name: ogre warrior - export_Frame_66
+    originalName: 
+    pivot: {x: 0.1666667, y: -3.3636365}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 311
+      width: 30
+      height: 11
+    spriteID: a1432a2958360ac4f93f0194fdbd21fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 311}
+  - name: ogre warrior - export_Frame_67
+    originalName: 
+    pivot: {x: 0.1666667, y: -3.3636365}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 330
+      width: 30
+      height: 11
+    spriteID: c4aa15864acb52743a072d11da8d7beb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 330}
+  - name: ogre warrior - export_Frame_68
+    originalName: 
+    pivot: {x: 0.1666667, y: -3.3636365}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 349
+      width: 30
+      height: 11
+    spriteID: b6fa1c3f84fead54ea7ddfbf85af7341
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 349}
+  - name: ogre warrior - export_Frame_69
+    originalName: 
+    pivot: {x: 0.1666667, y: -3.3636365}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 368
+      width: 30
+      height: 11
+    spriteID: d525bcfbadeb9884c83e7d0c47871083
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 368}
+  - name: ogre warrior - export_Frame_70
+    originalName: 
+    pivot: {x: 0.1666667, y: -3.3636365}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 387
+      width: 30
+      height: 11
+    spriteID: 9a7021cded5f8144a97a1635ac30aa6f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 387}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 894784750
+    name: ogre warrior - export
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: ogre warrior - export_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 35
+        y: 37
+        width: 35
+        height: 24
+      spriteId: a8f993f2f6ef96a469df84f5158edb6f
+    - name: ogre warrior - export_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 35
+        y: 37
+        width: 35
+        height: 23
+      spriteId: 0b8f4c126413b8a42b5f0c5ce293c8e4
+    - name: ogre warrior - export_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 35
+        y: 37
+        width: 35
+        height: 23
+      spriteId: de623879b88cfe545878937181502b56
+    - name: ogre warrior - export_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 35
+        y: 37
+        width: 34
+        height: 22
+      spriteId: 92e528aeedb8d3045bc5d3ed106256a2
+    - name: ogre warrior - export_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 35
+        y: 37
+        width: 34
+        height: 23
+      spriteId: 94aaa79d480f5a4499c026c78e63086a
+    - name: ogre warrior - export_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 35
+        y: 37
+        width: 35
+        height: 23
+      spriteId: 720ca9eafd98543459ab72bc5cccfbab
+    - name: ogre warrior - export_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 35
+        y: 39
+        width: 24
+        height: 22
+      spriteId: ab1af94243274df47be40a5f69252530
+    - name: ogre warrior - export_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 35
+        y: 39
+        width: 24
+        height: 21
+      spriteId: 53619b5d44ebfd440a75b14e3efe06d4
+    - name: ogre warrior - export_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 35
+        y: 39
+        width: 24
+        height: 21
+      spriteId: 1708583e6cdac9d4dba37862ff246341
+    - name: ogre warrior - export_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 35
+        y: 39
+        width: 24
+        height: 20
+      spriteId: 73122ea32a1e0ae49bfd4996c263995f
+    - name: ogre warrior - export_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 35
+        y: 39
+        width: 24
+        height: 21
+      spriteId: 37017d98c49a85a4a9793529ac0a621c
+    - name: ogre warrior - export_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 35
+        y: 39
+        width: 24
+        height: 21
+      spriteId: 6475628d12e11eb4a9ec13b959e01bbc
+    - name: ogre warrior - export_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 38
+        y: 39
+        width: 33
+        height: 22
+      spriteId: b22ee378967ab414b9174db58757ba3f
+    - name: ogre warrior - export_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 39
+        y: 39
+        width: 32
+        height: 20
+      spriteId: d2a82b44dc7c1924080214e13cbcf93c
+    - name: ogre warrior - export_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 39
+        y: 39
+        width: 30
+        height: 18
+      spriteId: 96cef342f59947140831f4e4a71c31b1
+    - name: ogre warrior - export_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 38
+        y: 39
+        width: 32
+        height: 20
+      spriteId: 5c969d7110d410f4e9b4303a64e63dce
+    - name: ogre warrior - export_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 38
+        y: 39
+        width: 33
+        height: 22
+      spriteId: 471c4b1c784c1814f8c31a0fdc6c36f4
+    - name: ogre warrior - export_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 38
+        y: 39
+        width: 33
+        height: 22
+      spriteId: 122a11f84268daa42816739f6ef87fbe
+    - name: ogre warrior - export_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 37
+        y: 39
+        width: 34
+        height: 21
+      spriteId: cb9372d4df9571f4a96f16b23fafcaeb
+    - name: ogre warrior - export_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 38
+        y: 39
+        width: 33
+        height: 20
+      spriteId: 07f18bb78d68b2444afff7ce1bdd61ec
+    - name: ogre warrior - export_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 38
+        y: 39
+        width: 33
+        height: 19
+      spriteId: 8819cc950b8fcdf4381384c8d8a8e48b
+    - name: ogre warrior - export_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 38
+        y: 39
+        width: 33
+        height: 20
+      spriteId: 3e5804dd580906f42b1c42d556776322
+    - name: ogre warrior - export_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 37
+        y: 39
+        width: 34
+        height: 21
+      spriteId: abc7ded0789e0004bad6b9248f8d4e42
+    - name: ogre warrior - export_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 38
+        y: 39
+        width: 21
+        height: 22
+      spriteId: b5cce3ecf277cf74b89860af9c4dc7f4
+    - name: ogre warrior - export_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 39
+        y: 39
+        width: 19
+        height: 20
+      spriteId: 6820afc68507006489c41efc1c2a4825
+    - name: ogre warrior - export_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 39
+        y: 39
+        width: 19
+        height: 18
+      spriteId: 798e3c3f605154a49a1165e1081b1617
+    - name: ogre warrior - export_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 38
+        y: 39
+        width: 20
+        height: 20
+      spriteId: af0f90061457b5444802b3f6b400e98c
+    - name: ogre warrior - export_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 38
+        y: 39
+        width: 21
+        height: 22
+      spriteId: 4006b1d92abbd8c4ca480b8b8aa01a69
+    - name: ogre warrior - export_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 38
+        y: 39
+        width: 20
+        height: 22
+      spriteId: 6f1ca508041e3be4e8b92d7d24565edd
+    - name: ogre warrior - export_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 37
+        y: 39
+        width: 20
+        height: 21
+      spriteId: 61d520112e0570648b055778b3667af4
+    - name: ogre warrior - export_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 38
+        y: 39
+        width: 18
+        height: 20
+      spriteId: bfd0ec34b8e7f804bbe7809fc36e385e
+    - name: ogre warrior - export_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 38
+        y: 39
+        width: 17
+        height: 19
+      spriteId: 05ee4c9b2cd279340bb860f6b236c451
+    - name: ogre warrior - export_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 38
+        y: 39
+        width: 18
+        height: 20
+      spriteId: f3f138d5094318242b8ae5a41ee0dd57
+    - name: ogre warrior - export_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 37
+        y: 39
+        width: 20
+        height: 21
+      spriteId: 838a40bb77fcd5f4393ce4061cc04064
+    - name: ogre warrior - export_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 35
+        y: 39
+        width: 36
+        height: 22
+      spriteId: 740faf22136411449ba96db926b64af1
+    - name: ogre warrior - export_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 35
+        y: 39
+        width: 35
+        height: 27
+      spriteId: 6da6fd197df6ad04bad66fc8f21fa886
+    - name: ogre warrior - export_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 34
+        y: 39
+        width: 32
+        height: 31
+      spriteId: 3c786421c45993346b3836e19eeaac85
+    - name: ogre warrior - export_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 34
+        y: 39
+        width: 26
+        height: 32
+      spriteId: 2dc5239cc93796a4495ae7f639a13405
+    - name: ogre warrior - export_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 35
+        y: 39
+        width: 51
+        height: 24
+      spriteId: 8b88fe2a187fc684d82f6d1ae2f26ad7
+    - name: ogre warrior - export_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 35
+        y: 38
+        width: 58
+        height: 23
+      spriteId: 203046493f82e0f4cb2701eeea8ff430
+    - name: ogre warrior - export_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 35
+        y: 37
+        width: 60
+        height: 24
+      spriteId: 5b8861176f7969d468fd288af76b4f87
+    - name: ogre warrior - export_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 35
+        y: 37
+        width: 55
+        height: 21
+      spriteId: 2e7c93011adf3da4cafa4806ae3b93bb
+    - name: ogre warrior - export_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 35
+        y: 37
+        width: 55
+        height: 21
+      spriteId: 3d970216756bf5f4eb3fee6b88f2e8c6
+    - name: ogre warrior - export_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 35
+        y: 37
+        width: 54
+        height: 21
+      spriteId: bb1d39a55c0021644a8b5bda16ba242a
+    - name: ogre warrior - export_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 35
+        y: 37
+        width: 38
+        height: 22
+      spriteId: 25265c52b7c49f140bad128dc812e847
+    - name: ogre warrior - export_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 35
+        y: 37
+        width: 35
+        height: 24
+      spriteId: d58bebe0f9db6f54cb97c1778b3873b1
+    - name: ogre warrior - export_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 35
+        y: 37
+        width: 35
+        height: 24
+      spriteId: bec5c9d9286e35a45b2104f237161392
+    - name: ogre warrior - export_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 35
+        y: 39
+        width: 35
+        height: 24
+      spriteId: 874244263eb55774c82df3e7aa3217f5
+    - name: ogre warrior - export_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 35
+        y: 39
+        width: 36
+        height: 21
+      spriteId: bb806ae94a167534d88169fef54fdcb6
+    - name: ogre warrior - export_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 34
+        y: 39
+        width: 36
+        height: 19
+      spriteId: 2f4817a633a3ed6419f361a0a9807cb5
+    - name: ogre warrior - export_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 34
+        y: 39
+        width: 36
+        height: 20
+      spriteId: e199b4027a72e0841b78f876cae4fc49
+    - name: ogre warrior - export_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 35
+        y: 37
+        width: 35
+        height: 24
+      spriteId: 891f9da3bf518f14090a66c2e5a34c36
+    - name: ogre warrior - export_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 35
+        y: 37
+        width: 35
+        height: 24
+      spriteId: e6107e04466a1d848bdb6f9a8a6e5dfb
+    - name: ogre warrior - export_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 35
+        y: 38
+        width: 34
+        height: 27
+      spriteId: 354434ee31abbe44ea5e23d58d00199e
+    - name: ogre warrior - export_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 35
+        y: 37
+        width: 35
+        height: 26
+      spriteId: d82d73021dec5bd4380b80f4184a843a
+    - name: ogre warrior - export_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 35
+        y: 38
+        width: 37
+        height: 21
+      spriteId: 73c53d57f00ea2444a77e742c76d094a
+    - name: ogre warrior - export_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 35
+        y: 38
+        width: 37
+        height: 19
+      spriteId: 70eb2c3c27f46ff40bb4b18dda70fcc2
+    - name: ogre warrior - export_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 35
+        y: 38
+        width: 37
+        height: 21
+      spriteId: 720c95a87997acb42ad1c7319f78c29b
+    - name: ogre warrior - export_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 36
+        y: 39
+        width: 35
+        height: 19
+      spriteId: 6ae1c907f18e55c4c8b547ac2a05c18e
+    - name: ogre warrior - export_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: 38
+        y: 39
+        width: 34
+        height: 19
+      spriteId: 152b701ac63630342821faabaa00ecea
+    - name: ogre warrior - export_Frame_60
+      frameIndex: 60
+      cellRect:
+        x: 40
+        y: 39
+        width: 31
+        height: 18
+      spriteId: 1892fc952a4f75c46ac0a14b9d9827bf
+    - name: ogre warrior - export_Frame_61
+      frameIndex: 61
+      cellRect:
+        x: 43
+        y: 37
+        width: 41
+        height: 17
+      spriteId: fc539eb84627ad44d943c61473363b7a
+    - name: ogre warrior - export_Frame_62
+      frameIndex: 62
+      cellRect:
+        x: 43
+        y: 37
+        width: 45
+        height: 20
+      spriteId: 9dc6ce564b51f7a4db26e6e2a90de0c2
+    - name: ogre warrior - export_Frame_63
+      frameIndex: 63
+      cellRect:
+        x: 43
+        y: 37
+        width: 46
+        height: 18
+      spriteId: 89195348c96dbfe4286f0b758d1ab954
+    - name: ogre warrior - export_Frame_64
+      frameIndex: 64
+      cellRect:
+        x: 43
+        y: 37
+        width: 47
+        height: 19
+      spriteId: a3d55af2bc45ef44380f4699cf976669
+    - name: ogre warrior - export_Frame_65
+      frameIndex: 65
+      cellRect:
+        x: 43
+        y: 37
+        width: 30
+        height: 11
+      spriteId: bd46bacc900744d43af4ce0cdb63b97d
+    - name: ogre warrior - export_Frame_66
+      frameIndex: 66
+      cellRect:
+        x: 43
+        y: 37
+        width: 30
+        height: 11
+      spriteId: a1432a2958360ac4f93f0194fdbd21fc
+    - name: ogre warrior - export_Frame_67
+      frameIndex: 67
+      cellRect:
+        x: 43
+        y: 37
+        width: 30
+        height: 11
+      spriteId: c4aa15864acb52743a072d11da8d7beb
+    - name: ogre warrior - export_Frame_68
+      frameIndex: 68
+      cellRect:
+        x: 43
+        y: 37
+        width: 30
+        height: 11
+      spriteId: b6fa1c3f84fead54ea7ddfbf85af7341
+    - name: ogre warrior - export_Frame_69
+      frameIndex: 69
+      cellRect:
+        x: 43
+        y: 37
+        width: 30
+        height: 11
+      spriteId: d525bcfbadeb9884c83e7d0c47871083
+    - name: ogre warrior - export_Frame_70
+      frameIndex: 70
+      cellRect:
+        x: 43
+        y: 37
+        width: 30
+        height: 11
+      spriteId: 9a7021cded5f8144a97a1635ac30aa6f
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 96, y: 96}
