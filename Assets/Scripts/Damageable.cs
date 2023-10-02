@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,7 +17,8 @@ public class Damageable : MonoBehaviour
 
     Animator animator;
     private float timeSinceHit;
-    
+    public event Action OnHealthChanged;
+
 
     public int MaxHealth {
         get { return _maxHealth; }
@@ -73,6 +75,7 @@ public class Damageable : MonoBehaviour
             Debug.Log("HIT");
             animator.SetTrigger("hit");
             damageableHit?.Invoke(damage, knockback);
+            OnHealthChanged?.Invoke();
 
             return true;
         }
