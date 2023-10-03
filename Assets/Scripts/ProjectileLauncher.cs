@@ -4,11 +4,24 @@ using UnityEngine;
 
 public class ProjectileLauncher : MonoBehaviour
 {
-    [SerializeField] public GameObject projectilePrefab;
+    [SerializeField] public GameObject basicAttackPrefab;
+    [SerializeField] public GameObject fireballPrefab;
+    [SerializeField] public GameObject tornadoPrefab;
+    [SerializeField] public GameObject phoenixPrefab;
+    [SerializeField] public GameObject fireBladePrefab;
     [SerializeField] public Transform launchPoint;
 
-    public void LaunchProjectile() {
-        GameObject projectile = Instantiate(projectilePrefab, launchPoint.position, projectilePrefab.transform.rotation);
+    public enum ProjectileType { 
+        BasicAttack, 
+        Fireball,
+        Tornado,
+        Phoenix,
+        FireBlade
+    }
+    private Dictionary<ProjectileType, GameObject> projectileDict = new Dictionary<ProjectileType, GameObject> ();
+
+    public void LaunchProjectile(ProjectileType projectileType) {
+        GameObject projectile = Instantiate(projectileDict[projectileType], launchPoint.position, projectileDict[projectileType].transform.rotation);
     
         Vector3 originalScale = projectile.transform.localScale;
 
@@ -19,15 +32,28 @@ public class ProjectileLauncher : MonoBehaviour
             );
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public void LaunchProjectileAtTarget(ProjectileType projectileType, Transform target) {
+        GameObject projectile = Instantiate(projectileDict[projectileType], launchPoint.position, projectileDict[projectileType].transform.rotation);
+
+        Vector3 originalScale = projectile.transform.localScale;
+
+        projectile.transform.localScale = new Vector3(
+            originalScale.x * (transform.localScale.x > 0 ? 1 : -1),
+            originalScale.y,
+            originalScale.z
+            );
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void Awake() {
+        LoadProjectileDict();
+    }
+
+    private void LoadProjectileDict() {
+        projectileDict.Add(ProjectileType.BasicAttack, basicAttackPrefab);
+        projectileDict.Add(ProjectileType.Fireball, fireballPrefab);
+        projectileDict.Add(ProjectileType.Tornado, tornadoPrefab);
+        projectileDict.Add(ProjectileType.FireBlade, fireBladePrefab);
+        projectileDict.Add(ProjectileType.Phoenix, phoenixPrefab);
     }
 }
