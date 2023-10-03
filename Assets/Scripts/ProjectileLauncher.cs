@@ -4,11 +4,22 @@ using UnityEngine;
 
 public class ProjectileLauncher : MonoBehaviour
 {
-    [SerializeField] public GameObject projectilePrefab;
+    [SerializeField] public GameObject basicAttackPrefab;
+    [SerializeField] public GameObject fireballPrefab;
+    [SerializeField] public GameObject tornadoPrefab;
+    [SerializeField] public GameObject phoenixPrefab;
     [SerializeField] public Transform launchPoint;
 
-    public void LaunchProjectile() {
-        GameObject projectile = Instantiate(projectilePrefab, launchPoint.position, projectilePrefab.transform.rotation);
+    public enum ProjectileType { 
+        BasicAttack, 
+        Fireball,
+        Tornado,
+        Phoenix
+    }
+    private Dictionary<ProjectileType, GameObject> projectileDict = new Dictionary<ProjectileType, GameObject> ();
+
+    public void LaunchProjectile(ProjectileType projectileType) {
+        GameObject projectile = Instantiate(projectileDict[projectileType], launchPoint.position, projectileDict[projectileType].transform.rotation);
     
         Vector3 originalScale = projectile.transform.localScale;
 
@@ -19,15 +30,14 @@ public class ProjectileLauncher : MonoBehaviour
             );
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    private void Awake() {
+        LoadProjectileDict();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void LoadProjectileDict() {
+        projectileDict.Add(ProjectileType.BasicAttack, basicAttackPrefab);
+        projectileDict.Add(ProjectileType.Fireball, fireballPrefab);
+        projectileDict.Add(ProjectileType.Tornado, tornadoPrefab);
+        projectileDict.Add(ProjectileType.Phoenix, phoenixPrefab);
     }
 }

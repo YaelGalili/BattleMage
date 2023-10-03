@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    [SerializeField] bool disableOnHit = false;
+    [SerializeField] public Collider2D target;
+    private bool _enabled = true;
+
     Collider2D attackCollider;
     public int attackDamage = 10;
     public Vector2 knockback = Vector2.zero;
@@ -12,30 +16,25 @@ public class Attack : MonoBehaviour
         attackCollider = GetComponent<Collider2D>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D collision) {
-        // check if can be damaged
-        Damageable damageable = collision.GetComponent<Damageable>();
+        if (_enabled) {
+            if (target != null) {
+                if (!GameObject.ReferenceEquals(collision, target))
+                    return;
+            }
+            // check if can be damaged
+            Damageable damageable = collision.GetComponent<Damageable>();
 
-        if (damageable != null) {
+            if (damageable != null) {
+                if (disableOnHit)
+                    _enabled = false;
+                Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
 
-            Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
-
-            // damage the target
-            bool gotHit = damageable.Hit(attackDamage, deliveredKnockback);
-            if (gotHit)
-                Debug.Log(collision.name + " hit for " + attackDamage);
+                // damage the target
+                bool gotHit = damageable.Hit(attackDamage, deliveredKnockback);
+                if (gotHit)
+                    Debug.Log(collision.name + " hit for " + attackDamage);
+            }
         }
     }
 }
