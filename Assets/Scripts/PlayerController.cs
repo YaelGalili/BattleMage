@@ -11,7 +11,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpImpulse = 6f;
     [SerializeField] private bool _isMoving = false;
     [SerializeField] private bool _isFacingRight = true;
-    
+    [SerializeField] private AudioClip fireballSound;
+    [SerializeField] private AudioClip magicballSound;
+
+    private UIManager uiManager;
+
     private Vector2 moveInput;
 
     Rigidbody2D rb;
@@ -72,6 +76,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         damageable = GetComponent<Damageable>();
         touchingDirections = GetComponent<TouchingDirections>();
+        uiManager = FindObjectOfType<UIManager>();
     }
 
     // Start is called before the first frame update
@@ -140,6 +145,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context) {
         if (context.started) {
+            SoundManager.instance.PlaySound(magicballSound);
             animator.SetTrigger("attack");
         }
     }
@@ -147,5 +153,10 @@ public class PlayerController : MonoBehaviour
     public void OnHit(int damage, Vector2 knockback) {
         damageable.LockVelocity = true;
         rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
+    }
+
+    public void OnDeath()
+    {
+        uiManager.GameOver();
     }
 }
