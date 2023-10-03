@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class ChaseTarget : MonoBehaviour
 {
-    [SerializeField] Transform target;
+    [SerializeField] public Transform target;
 
     NavMeshAgent agent;
 
@@ -13,6 +13,7 @@ public class ChaseTarget : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+
     }
 
     // Start is called before the first frame update

@@ -9,8 +9,9 @@ public class SpellCaster : MonoBehaviour
     [SerializeField] public GameObject earthenSpikePrefab;
     [SerializeField] public GameObject tornadoPrefab;
     [SerializeField] public GameObject arcaneBlastPrefab;
-    [SerializeField] public GameObject phoenixPrefab;
+    [SerializeField] public GameObject fireBladePrefab;
     [SerializeField] public GameObject flameStrikePrefab;
+    [SerializeField] public GameObject phoenixPrefab;
     [SerializeField] DetectionZone enemyDetectionZone;
     [SerializeField] ProjectileLauncher projectileLauncher;
 
@@ -28,7 +29,8 @@ public class SpellCaster : MonoBehaviour
         Tornado,
         ArcaneBlast,
         Phoenix,
-        FlameStrike
+        FlameStrike,
+        FireBlade
     }
     private Dictionary<Spell, GameObject> spellDict = new Dictionary<Spell, GameObject>();
     
@@ -52,6 +54,9 @@ public class SpellCaster : MonoBehaviour
                 break;
             case Spell.FlameStrike:
                 CastAtEnemies(10, 0);
+                break;
+            case Spell.FireBlade:
+                projectileLauncher.LaunchProjectile(ProjectileLauncher.ProjectileType.FireBlade);
                 break;
             case Spell.Phoenix:
                 projectileLauncher.LaunchProjectile(ProjectileLauncher.ProjectileType.Phoenix);
@@ -145,11 +150,20 @@ public class SpellCaster : MonoBehaviour
         spellDict.Add(Spell.EarthenSpike, earthenSpikePrefab);
         spellDict.Add(Spell.Tornado, tornadoPrefab);
         spellDict.Add(Spell.ArcaneBlast, arcaneBlastPrefab);
+        spellDict.Add(Spell.FireBlade, fireBladePrefab);
         spellDict.Add(Spell.FlameStrike, flameStrikePrefab);
         spellDict.Add(Spell.Phoenix, phoenixPrefab);
+
         chosenSpells.Add(Spell.LightningStorm);
-        chosenSpells.Add(Spell.Tornado);
+        //chosenSpells.Add(Spell.Fireball);
+        
+        //chosenSpells.Add(Spell.Tornado);
+        chosenSpells.Add(Spell.EarthenSpike);
+       
         chosenSpells.Add(Spell.FlameStrike);
-        chosenSpells.Add(Spell.Phoenix);
+        //chosenSpells.Add(Spell.ArcaneBlast);
+        
+        chosenSpells.Add(Spell.FireBlade);
+        //chosenSpells.Add(Spell.Phoenix);
     }
 }

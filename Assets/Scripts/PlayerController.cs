@@ -271,12 +271,20 @@ public class PlayerController : MonoBehaviour
         if (Level >= 5 && spellCaster.queuedSpell == SpellCaster.Spell.None) {
             Debug.Log("OnAbility5");
             if (context.started) {
+                Debug.Log(spellCaster.chosenSpells[3]);
                 if (spellCaster.chosenSpells[3] == SpellCaster.Spell.Phoenix) {
                     // Phoenix
                     Debug.Log("Cast Phoenix");
                     animator.SetTrigger("attack");
                     animator.SetTrigger("blueAttack");
                     spellCaster.queuedSpell = SpellCaster.Spell.Phoenix;
+                }
+                else {
+                    // Phoenix
+                    Debug.Log("Cast FireBlade");
+                    animator.SetTrigger("attack");
+                    animator.SetTrigger("redAttack");
+                    spellCaster.queuedSpell = SpellCaster.Spell.FireBlade;
                 }
             }
         }

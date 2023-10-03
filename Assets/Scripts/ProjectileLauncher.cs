@@ -8,13 +8,15 @@ public class ProjectileLauncher : MonoBehaviour
     [SerializeField] public GameObject fireballPrefab;
     [SerializeField] public GameObject tornadoPrefab;
     [SerializeField] public GameObject phoenixPrefab;
+    [SerializeField] public GameObject fireBladePrefab;
     [SerializeField] public Transform launchPoint;
 
     public enum ProjectileType { 
         BasicAttack, 
         Fireball,
         Tornado,
-        Phoenix
+        Phoenix,
+        FireBlade
     }
     private Dictionary<ProjectileType, GameObject> projectileDict = new Dictionary<ProjectileType, GameObject> ();
 
@@ -30,6 +32,19 @@ public class ProjectileLauncher : MonoBehaviour
             );
     }
 
+    public void LaunchProjectileAtTarget(ProjectileType projectileType, Transform target) {
+        GameObject projectile = Instantiate(projectileDict[projectileType], launchPoint.position, projectileDict[projectileType].transform.rotation);
+
+        Vector3 originalScale = projectile.transform.localScale;
+
+        projectile.transform.localScale = new Vector3(
+            originalScale.x * (transform.localScale.x > 0 ? 1 : -1),
+            originalScale.y,
+            originalScale.z
+            );
+
+    }
+
     private void Awake() {
         LoadProjectileDict();
     }
@@ -38,6 +53,7 @@ public class ProjectileLauncher : MonoBehaviour
         projectileDict.Add(ProjectileType.BasicAttack, basicAttackPrefab);
         projectileDict.Add(ProjectileType.Fireball, fireballPrefab);
         projectileDict.Add(ProjectileType.Tornado, tornadoPrefab);
+        projectileDict.Add(ProjectileType.FireBlade, fireBladePrefab);
         projectileDict.Add(ProjectileType.Phoenix, phoenixPrefab);
     }
 }

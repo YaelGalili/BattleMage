@@ -451,7 +451,7 @@ MonoBehaviour:
   _health: 100
   _isAlive: 1
   isInvincible: 0
-  invincibilityTime: 0.75
+  invincibilityTime: 0.85
 --- !u!114 &3673581769313269436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,6 +468,7 @@ MonoBehaviour:
   fireballPrefab: {fileID: 8605983028042800406, guid: 62edef8408ef818448888db91459cf6f, type: 3}
   tornadoPrefab: {fileID: 8605983028042800406, guid: ef225faa8412b9143b83122b3a99f1c9, type: 3}
   phoenixPrefab: {fileID: 8605983028042800406, guid: 4823f2a8b1a816543bfb66cd20b280d7, type: 3}
+  fireBladePrefab: {fileID: 8605983028042800406, guid: 772aa11acb0e9784ca49fddfcf4db525, type: 3}
   launchPoint: {fileID: 4003317123475764311}
 --- !u!114 &4396056298571986736
 MonoBehaviour:
@@ -486,8 +487,9 @@ MonoBehaviour:
   earthenSpikePrefab: {fileID: 6835714440295691962, guid: 0724e57afd5414548a7df8358535f69b, type: 3}
   tornadoPrefab: {fileID: 8605983028042800406, guid: ef225faa8412b9143b83122b3a99f1c9, type: 3}
   arcaneBlastPrefab: {fileID: 6835714440295691962, guid: 62484cf595909e24d9873c985779671c, type: 3}
-  phoenixPrefab: {fileID: 8605983028042800406, guid: 4823f2a8b1a816543bfb66cd20b280d7, type: 3}
+  fireBladePrefab: {fileID: 8605983028042800406, guid: 772aa11acb0e9784ca49fddfcf4db525, type: 3}
   flameStrikePrefab: {fileID: 6835714440295691962, guid: 0bb452088ec48be47970c0591f429b7f, type: 3}
+  phoenixPrefab: {fileID: 8605983028042800406, guid: 4823f2a8b1a816543bfb66cd20b280d7, type: 3}
   enemyDetectionZone: {fileID: 6215351532802370844}
   projectileLauncher: {fileID: 3673581769313269436}
   chosenSpells: 

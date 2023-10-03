@@ -41,13 +41,11 @@ public class Projectile : MonoBehaviour
     void FixedUpdate()
     {
         if (!Stop) {
-            Debug.Log("hoohoohoo");
             rb.velocity = new Vector2(moveSpeed.x * transform.localScale.x, rb.velocity.y);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log("hello");
         if (!Stop) {
             Damageable damageable = collision.GetComponent<Damageable>();
 

@@ -7,6 +7,13 @@ public class FlyingEnemy : Enemy {
 
     private float prev_x, curr_x;
     private bool disabled_components = false;
+    private ChaseTarget chaseTarget;
+
+    private void Start() {
+        chaseTarget = gameObject.GetComponent<ChaseTarget>();
+        GameObject player = GameObject.FindWithTag("Player");
+        chaseTarget.target = player.transform;
+    }
 
     private void FixedUpdate() {
         if (!damageable.LockVelocity && damageable.IsAlive)
@@ -17,7 +24,7 @@ public class FlyingEnemy : Enemy {
                 gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
                 disabled_components = true;
             }
-                // rb.velocity = new Vector2(0, -20);
+            
             rb.gravityScale = 3;
             Debug.Log("Flying Enemy Dead");
         }
