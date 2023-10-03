@@ -5,7 +5,7 @@ public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public string message;
     //=======================================For GameObjects==================
-    /*private void OnMouseEnter()
+    private void OnMouseEnter()
     {
         TooltipManager._instance.ShowTooltip(message);
     }
@@ -13,7 +13,7 @@ public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     private void OnMouseExit()
     {
         TooltipManager._instance.HideTooltip();
-    }*/
+    }
     //=======================================For Buttons=========================
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
