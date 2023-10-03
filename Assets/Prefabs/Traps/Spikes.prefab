@@ -133,6 +133,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3fbba860d008c848ae31206ffcbbf10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableOnHit: 0
+  target: {fileID: 0}
+  attackOnStay: 0
   attackDamage: 5
   knockback: {x: 3, y: 5}
 --- !u!61 &1135773978766708335
@@ -232,6 +235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3fbba860d008c848ae31206ffcbbf10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableOnHit: 0
+  target: {fileID: 0}
+  attackOnStay: 1
   attackDamage: 5
   knockback: {x: 3, y: 3}
 --- !u!1 &8184646101143966402

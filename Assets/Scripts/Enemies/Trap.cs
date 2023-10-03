@@ -14,7 +14,7 @@ public class Trap : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         Damageable damageable = collision.GetComponent<Damageable>();
 
