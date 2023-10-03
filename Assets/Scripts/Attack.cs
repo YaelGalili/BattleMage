@@ -40,7 +40,8 @@ public class Attack : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
+
+    protected void OnTriggerEnter2D(Collider2D collision) {
         if (_enabled & !attackOnStay) {
             if (target != null) {
                 if (!GameObject.ReferenceEquals(collision, target))
@@ -48,6 +49,8 @@ public class Attack : MonoBehaviour
             }
             // check if can be damaged
             Damageable damageable = collision.GetComponent<Damageable>();
+
+
 
             if (damageable != null) {
                 if (disableOnHit)
