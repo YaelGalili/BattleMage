@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 4396056298571986736}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,6 +163,8 @@ MonoBehaviour:
   jumpImpulse: 10
   _isMoving: 0
   _isFacingRight: 1
+  fireballSound: {fileID: 0}
+  magicballSound: {fileID: 0}
 --- !u!114 &8727100003326672096
 MonoBehaviour:
   m_ObjectHideFlags: 0

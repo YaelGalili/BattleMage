@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class ChaseTarget : MonoBehaviour
 {
-    [SerializeField] public Transform target;
+    [SerializeField] public Transform target = null;
 
     NavMeshAgent agent;
 

@@ -22,7 +22,7 @@ TagManager:
   - EnemyDetection
   - PlayerProjectileIgnoreEnemies
   - IgnoreAll
-  - 
+  - Trap
   - 
   - 
   - 
@@ -41,6 +41,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 4018740473
+    locked: 0
+  - name: Foreground
+    uniqueID: 973942011
     locked: 0
   - name: Default
     uniqueID: 0
