@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Stat : MonoBehaviour
+public class StatBar : MonoBehaviour
 {
     [SerializeField] private Damageable damageable;
     private Image content;
