@@ -3,18 +3,15 @@ using UnityEngine.UI;
 
 public class Spellbook : MonoBehaviour
 {
+    [SerializeField] private Text descriptionText;
+    [SerializeField] private Text headerText;
     private const string descriptionDefault = "";
     private const string headerDefault = "Spellbook";
 
-
-    [SerializeField] private Text descriptionText;
-    [SerializeField] private Text headerText;
-
-    private void Start()
+    private void OnDisable()
     {
-        //gameObject.SetActive(true);
-        //descriptionText.text = descriptionDefault;
-        //headerText.text = headerDefault;
+        descriptionText.text = descriptionDefault;
+        headerText.text = headerDefault;
     }
 
     public void SetAndShowHeader(string headerStr)
