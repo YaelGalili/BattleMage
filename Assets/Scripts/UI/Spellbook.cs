@@ -1,20 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Spellbook : MonoBehaviour
 {
-    private Text headerText;
+    private const string descriptionDefault = "";
+    private const string headerDefault = "Spellbook";
 
-    private void Awake()
+
+    [SerializeField] private Text descriptionText;
+    [SerializeField] private Text headerText;
+
+    private void Start()
     {
-        headerText = GetComponent<Text>();
+        //gameObject.SetActive(true);
+        //descriptionText.text = descriptionDefault;
+        //headerText.text = headerDefault;
     }
 
-    public void SetAndShowHeader(string tooltipStr)
+    public void SetAndShowHeader(string headerStr)
     {
         gameObject.SetActive(true);
-        headerText.text = tooltipStr;
+        headerText.text = headerStr;
+    }
+
+    public void SetAndShowDescription(string descriptionStr)
+    {
+        gameObject.SetActive(true);
+        descriptionText.text = descriptionStr;
     }
 }
