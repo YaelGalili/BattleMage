@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8330670912807253000}
   - component: {fileID: 8330670912807253003}
   - component: {fileID: 8330670912807253002}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Spear
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeTime: 1
-  attackDamage: 10
+  attackDamage: 1
   knockback: {x: 6, y: 3}
 --- !u!95 &8330670912807253002
 Animator:

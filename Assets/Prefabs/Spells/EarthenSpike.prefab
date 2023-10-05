@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableOnHit: 1
   target: {fileID: 0}
+  attackOnStay: 0
   attackDamage: 60
   knockback: {x: 8, y: 10}
 --- !u!60 &8522103728766761153
@@ -93,7 +94,10 @@ GameObject:
   - component: {fileID: 7344980275600540483}
   - component: {fileID: 374500980572354642}
   - component: {fileID: 5338538117828243448}
-  m_Layer: 0
+  - component: {fileID: 3299764603227776447}
+  - component: {fileID: 5725299787907635747}
+  - component: {fileID: 4136291990927878102}
+  m_Layer: 12
   m_Name: EarthenSpike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,3 +193,74 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &3299764603227776447
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6835714440295691962}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 50
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 100
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &5725299787907635747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6835714440295691962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1046c3eb96b005848a5fec746f5ddd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isGrounded: 1
+  _isOnCeiling: 0
+  _isOnWall: 0
+  touchingCol: {fileID: 0}
+  animator: {fileID: 0}
+  castFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  groundDistance: 0.05
+  ceilingDistance: 0.05
+  wallDistance: 0.2
+--- !u!70 &4136291990927878102
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6835714440295691962}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.10347452, y: -0.14227702}
+  m_Size: {x: 2.55136, y: 2.965257}
+  m_Direction: 0

@@ -14,10 +14,14 @@ public class SpellCaster : MonoBehaviour
     [SerializeField] public GameObject phoenixPrefab;
     [SerializeField] DetectionZone enemyDetectionZone;
     [SerializeField] ProjectileLauncher projectileLauncher;
+    [SerializeField] private int maxSpellQueueSize = 2;
 
     public List<Spell> chosenSpells = new List<Spell>();
 
-    public Spell queuedSpell;
+    private Queue<Spell> spellQueue = new Queue<Spell>();
+    private Spell queuedSpell;
+
+    private IEnumerator coroutine;
 
     Animator animator;
 
@@ -36,6 +40,7 @@ public class SpellCaster : MonoBehaviour
     
 
     public void CastSpell() {
+        queuedSpell = spellQueue.Dequeue();
         switch (queuedSpell) {
             case Spell.LightningStorm:
                 CastAtEnemies(7, 2);
@@ -68,13 +73,15 @@ public class SpellCaster : MonoBehaviour
         queuedSpell = Spell.None;
     }
 
-    private void CastAtClosestEnemy(float yOffset=0, bool onlyGrounded=false, bool singleTarget=false) {
+
+    private bool CastAtClosestEnemy(float yOffset=0, bool onlyGrounded=false, bool singleTarget=false) {
         float minDistance = 1200f, currDistance;
         Collider2D closestCollider = null;
         Spell spell = queuedSpell;
 
         Collider2D selfCollider = gameObject.GetComponent<Collider2D>();
 
+        // find nearest enemy
         if (enemyDetectionZone.detectedColliders.Count > 0) {
             foreach (Collider2D collider in enemyDetectionZone.detectedColliders) {
                 // only hit enemies infront of the player
@@ -96,27 +103,30 @@ public class SpellCaster : MonoBehaviour
                     }
                 }
             }
+
+            // cast the spell at the nearest enemy
             if (closestCollider != null) {
                 Vector3 enemyPosition = closestCollider.transform.position;
-                Vector3 spawn = new Vector3(enemyPosition.x, enemyPosition.y + yOffset, enemyPosition.z);
-                GameObject currSpell = Instantiate(spellDict[spell], spawn, spellDict[spell].transform.rotation);
-
-                Vector3 originalScale = currSpell.transform.localScale;
-                currSpell.transform.localScale = new Vector3(
-                    originalScale.x * (transform.localScale.x > 0 ? 1 : -1),
-                    originalScale.y,
-                    originalScale.z
-            );
+                Vector3 castPosition = new Vector3(enemyPosition.x, enemyPosition.y + yOffset, enemyPosition.z);
+                
+                GameObject currSpell = CastAtPosition(spell, castPosition);
 
                 Attack attack = currSpell.transform.GetChild(0).gameObject.GetComponent<Attack>();
                 if (singleTarget)
                     attack.target = closestCollider;
+                return true;
             }
         }
+
+        // no enemy found
+        Instantiate(spellDict[spell], gameObject.transform.position, spellDict[spell].transform.rotation);
+        return false;
     }
 
-    private void CastAtEnemies(int maxHit, int yOffset=0, bool onlyGrounded=false) {
+
+    private bool CastAtEnemies(int maxHit, int yOffset=0, bool onlyGrounded=false) {
         Spell spell = queuedSpell;
+        bool hitAny = false;
 
         if (enemyDetectionZone.detectedColliders.Count > 0) {
             foreach (Collider2D collider in enemyDetectionZone.detectedColliders) {
@@ -128,11 +138,12 @@ public class SpellCaster : MonoBehaviour
                             continue;
                     }
                     Vector3 enemyPosition = collider.transform.position;
-                    Vector3 spawn = new Vector3(enemyPosition.x, enemyPosition.y + yOffset, enemyPosition.z);
-                    GameObject currSpell = Instantiate(spellDict[spell], spawn, spellDict[spell].transform.rotation);
+                    Vector3 castPosition = new Vector3(enemyPosition.x, enemyPosition.y + yOffset, enemyPosition.z);
+                    GameObject currSpell = CastAtPosition(spell, castPosition);
                     Attack attack = currSpell.transform.GetChild(0).gameObject.GetComponent<Attack>();
                     attack.target = collider;
-
+                    
+                    hitAny = true;
                     //currSpell.transform.parent = collider.transform;
                     maxHit -= 1;
                     if (maxHit == 0)
@@ -140,8 +151,36 @@ public class SpellCaster : MonoBehaviour
                 }
             }
         }
+        return hitAny;
 
     }
+
+
+    private GameObject CastAtPosition(Spell spell, Vector3 castPosition) {
+        GameObject currSpell = Instantiate(spellDict[spell], castPosition, spellDict[spell].transform.rotation);
+
+        Vector3 originalScale = currSpell.transform.localScale;
+        currSpell.transform.localScale = new Vector3(
+            originalScale.x * (transform.localScale.x > 0 ? 1 : -1),
+            originalScale.y,
+            originalScale.z
+        );
+        return currSpell;
+    }
+
+
+    public bool QueueSpell(Spell spell) { 
+        spellQueue.Enqueue(spell);
+        return true;
+        /*if (spellQueue.Count < maxSpellQueueSize) {
+            Debug.Log("meow");
+            spellQueue.Enqueue(spell);
+            return true;
+        }
+        return false;*/
+    }
+
+
 
     private void Awake() {
         animator = GetComponent<Animator>();
@@ -160,8 +199,8 @@ public class SpellCaster : MonoBehaviour
         //chosenSpells.Add(Spell.Tornado);
         chosenSpells.Add(Spell.EarthenSpike);
        
-        chosenSpells.Add(Spell.FlameStrike);
-        //chosenSpells.Add(Spell.ArcaneBlast);
+        //chosenSpells.Add(Spell.FlameStrike);
+        chosenSpells.Add(Spell.ArcaneBlast);
         
         chosenSpells.Add(Spell.FireBlade);
         //chosenSpells.Add(Spell.Phoenix);

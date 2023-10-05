@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4162022927769444930
 Transform:
   m_ObjectHideFlags: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4109042757680350666}
   - component: {fileID: 1017549796718216736}
   - component: {fileID: 1135773978766708335}
-  m_Layer: 8
+  m_Layer: 16
   m_Name: Spikes
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7857423402909036172
 Transform:
   m_ObjectHideFlags: 0

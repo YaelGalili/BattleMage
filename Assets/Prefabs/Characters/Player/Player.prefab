@@ -453,7 +453,7 @@ MonoBehaviour:
   _health: 100
   _isAlive: 1
   isInvincible: 0
-  invincibilityTime: 0.85
+  invincibilityTime: 0.75
 --- !u!114 &3673581769313269436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,8 +494,8 @@ MonoBehaviour:
   phoenixPrefab: {fileID: 8605983028042800406, guid: 4823f2a8b1a816543bfb66cd20b280d7, type: 3}
   enemyDetectionZone: {fileID: 6215351532802370844}
   projectileLauncher: {fileID: 3673581769313269436}
+  maxSpellQueueSize: 2
   chosenSpells: 
-  queuedSpell: 0
 --- !u!1001 &4440826550826224784
 PrefabInstance:
   m_ObjectHideFlags: 0

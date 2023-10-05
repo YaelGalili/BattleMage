@@ -19,6 +19,10 @@ public class Damageable : MonoBehaviour
     private float timeSinceHit;
     public event Action OnHealthChanged;
 
+    public bool IsInvincible {
+        get { return isInvincible; }
+    }
+
     public int MaxHealth {
         get { return _maxHealth; }
         set { _maxHealth = value; }
@@ -71,7 +75,6 @@ public class Damageable : MonoBehaviour
             isInvincible = true;
 
             // Notify subscribed components that the object was hit
-            Debug.Log("HIT");
             animator.SetTrigger("hit");
             damageableHit?.Invoke(damage, knockback);
             OnHealthChanged?.Invoke();

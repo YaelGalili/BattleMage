@@ -74,6 +74,6 @@ public class Enemy : MonoBehaviour {
 
     public void OnHit(int damage, Vector2 knockback) {
         damageable.LockVelocity = true;
-        rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
+        rb.velocity = new Vector2(rb.velocity.x + knockback.x, rb.velocity.y + knockback.y);
     }
 }

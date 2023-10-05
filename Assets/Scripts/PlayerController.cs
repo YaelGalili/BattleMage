@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
 
 public class PlayerController : MonoBehaviour
@@ -90,7 +91,6 @@ public class PlayerController : MonoBehaviour
             _xp += xpToGain;
             while (_xp >= LevelBracket && Level < 5) {
                 _level += 1;
-                Debug.Log("Level Up!");
             }
         }
     }
@@ -119,21 +119,12 @@ public class PlayerController : MonoBehaviour
         uiManager = FindObjectOfType<UIManager>();
     }
 
-    // Start is called before the first frame update
-    void Start() {
-        
-    }
-
-    // Update is called once per frame
-    void Update() {
-
-    }
 
     private void FixedUpdate() {
         // move
-        if (!damageable.LockVelocity)
-            rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
-
+        if (!damageable.LockVelocity) {
+            rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);               
+        }
         if (JumpAttack && touchingDirections.IsGrounded)
             rb.velocity = new Vector2(0, rb.velocity.y);
 
@@ -147,8 +138,6 @@ public class PlayerController : MonoBehaviour
             _coyoteTimeCounter = _coyoteTime;
         else
             _coyoteTimeCounter -= Time.deltaTime;
-
-
     }
 
     public void OnMove(InputAction.CallbackContext context) {
@@ -204,7 +193,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void OnAbility2(InputAction.CallbackContext context) {
-        if (Level >= 2 && spellCaster.queuedSpell == SpellCaster.Spell.None) {
+        if (Level >= 2 && spellCaster.QueueSpell(SpellCaster.Spell.LightningStorm)) {
             Debug.Log("OnAbility2");
             if (context.started) {
                 if (spellCaster.chosenSpells[0] == SpellCaster.Spell.LightningStorm) {
@@ -212,7 +201,7 @@ public class PlayerController : MonoBehaviour
                     Debug.Log("Cast LightningStorm");
                     animator.SetTrigger("attack");
                     animator.SetTrigger("blueAttack");
-                    spellCaster.queuedSpell = SpellCaster.Spell.LightningStorm;
+
 
                 }
                 else {
@@ -220,12 +209,12 @@ public class PlayerController : MonoBehaviour
                     Debug.Log("Cast Fireball");
                     animator.SetTrigger("attack");
                     animator.SetTrigger("redAttack");
-                    spellCaster.queuedSpell = SpellCaster.Spell.Fireball;
+
                 }
             }
         }
     }
-
+    /*
     public void OnAbility3(InputAction.CallbackContext context) {
         if (Level >= 3 && spellCaster.queuedSpell == SpellCaster.Spell.None) {
             Debug.Log("OnAbility3");
@@ -294,12 +283,12 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
+    */
 
     public void OnHit(int damage, Vector2 knockback) {
-        spellCaster.queuedSpell = SpellCaster.Spell.None;
-        damageable.LockVelocity = true;
-        rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
+        //spellCaster.queuedSpell = SpellCaster.Spell.None;
+        //if(touchingDirections.IsGrounded) damageable.LockVelocity = true;
+        rb.velocity = new Vector2(knockback.x, knockback.y != 0 ? knockback.y * 1.5f : rb.velocity.y);
     }
 
     public void OnDeath()

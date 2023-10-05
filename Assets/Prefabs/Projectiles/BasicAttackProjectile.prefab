@@ -133,9 +133,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  knockback: {x: 3, y: 0}
+  knockback: {x: 1, y: 0}
   moveSpeed: {x: 16, y: 0}
   hitPosition: {fileID: 7755975681808725318}
+  pierceEnemies: 0
 --- !u!95 &7877073897398363206
 Animator:
   serializedVersion: 5

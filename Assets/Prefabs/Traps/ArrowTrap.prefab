@@ -50,7 +50,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6370817098822943236}
-  m_Layer: 8
+  m_Layer: 16
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 6370817099360422167}
   - component: {fileID: 6370817099360422166}
   - component: {fileID: 6370817099360422164}
-  m_Layer: 8
+  m_Layer: 16
   m_Name: ArrowTrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
