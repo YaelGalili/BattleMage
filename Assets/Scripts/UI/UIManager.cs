@@ -10,17 +10,28 @@ public class UIManager : MonoBehaviour
     [Header("Pause")]
     [SerializeField] private GameObject pauseScreen;
 
+    [Header("Spellbook")]
+    [SerializeField] private GameObject spellbookScreen;
+
     private void Awake()
     {
         gameOverScreen.SetActive(false);
         pauseScreen.SetActive(false);
+        spellbookScreen.SetActive(false);
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            PauseGame(!pauseScreen.activeInHierarchy);
+            if (spellbookScreen.activeInHierarchy)
+            {
+                ShowSpellbook(false);
+            }
+            else
+            {
+                PauseGame(!pauseScreen.activeInHierarchy);
+            }
         }
     }
 
@@ -56,6 +67,11 @@ public class UIManager : MonoBehaviour
     public void PauseGame(bool status)
     {
         pauseScreen.SetActive(status);
+        Pause(status);
+    }
+
+    private void Pause(bool status)
+    {
         if (status)
         {
             Time.timeScale = 0;
@@ -74,6 +90,14 @@ public class UIManager : MonoBehaviour
     public void MusicVolume()
     {
         SoundManager.instance.ChangeMusicVolume(0.2f);
+    }
+    #endregion
+
+    #region Spellbook
+    public void ShowSpellbook(bool status)
+    {
+        spellbookScreen.SetActive(status);
+        Pause(status);
     }
     #endregion
 }
