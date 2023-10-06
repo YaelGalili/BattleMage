@@ -2,25 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
 
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController : MonoBehaviour {
     [SerializeField] private float walkSpeed = 5f;
     [SerializeField] private float jumpImpulse = 6f;
     [SerializeField] private bool _isMoving = false;
     [SerializeField] private bool _isFacingRight = true;
     [SerializeField] private AudioClip fireballSound;
     [SerializeField] private AudioClip magicballSound;
+    [SerializeField] bool testMode = false;
 
     private UIManager uiManager;
 
-    private int _xp = 0;
-    private int _level = 1;
-    private List<int> _levelBrackets = new List<int> { 30, 80, 150 , 250, 400};
     private Vector2 moveInput;
+
+    // for jumping
     private float _coyoteTime = 0.15f;
     private float _coyoteTimeCounter = 0f;
 
@@ -28,16 +27,10 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     Damageable damageable;
     TouchingDirections touchingDirections;
+    ExperienceSystem experienceSystem;
     SpellCaster spellCaster;
 
-    public int Level {
-        get { return _level; }
-    }
-
-    public int LevelBracket {
-        get {
-            return _levelBrackets[Unity.Mathematics.math.min(_level-1, 3)]; }
-    }
+  
 
     public bool CanMove {
         get {
@@ -86,15 +79,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void GainXP(int xpToGain) {
-        if (xpToGain > 0) {
-            _xp += xpToGain;
-            while (_xp >= LevelBracket && Level < 5) {
-                _level += 1;
-            }
-        }
-    }
- 
     public bool IsAlive {
         get {
             return animator.GetBool("isAlive");
@@ -109,24 +93,32 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Awake() {
-        GainXP(400);
-
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         damageable = GetComponent<Damageable>();
         spellCaster = GetComponent<SpellCaster>();
         touchingDirections = GetComponent<TouchingDirections>();
+        experienceSystem = GetComponent<ExperienceSystem>();
         uiManager = FindObjectOfType<UIManager>();
     }
 
+    private void Start() {
+        if (testMode)
+            experienceSystem.GainXP(400);
+    }
 
     private void FixedUpdate() {
         // move
         if (!damageable.LockVelocity) {
             rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);               
+            
         }
-        if (JumpAttack && touchingDirections.IsGrounded)
+        if (JumpAttack && touchingDirections.IsGrounded )
             rb.velocity = new Vector2(0, rb.velocity.y);
+
+        // -- Wall Slide, not working properly 
+        //if (!touchingDirections.IsGrounded && touchingDirections.IsOnWall)
+        //    rb.velocity = new Vector2(rb.velocity.x, -1.2f);
 
         animator.SetFloat("yVelocity", rb.velocity.y);
         
@@ -193,30 +185,27 @@ public class PlayerController : MonoBehaviour
     }
 
     public void OnAbility2(InputAction.CallbackContext context) {
-        if (Level >= 2 && spellCaster.QueueSpell(SpellCaster.Spell.LightningStorm)) {
+        if (experienceSystem.Level >= 2) {
             Debug.Log("OnAbility2");
             if (context.started) {
                 if (spellCaster.chosenSpells[0] == SpellCaster.Spell.LightningStorm) {
-                    // LightningStorm
+                    // Lightning Storm
                     Debug.Log("Cast LightningStorm");
                     animator.SetTrigger("attack");
-                    animator.SetTrigger("blueAttack");
-
-
-                }
+                    animator.SetTrigger("lightningStorm");
+                    }
                 else {
                     // Fireball
                     Debug.Log("Cast Fireball");
                     animator.SetTrigger("attack");
-                    animator.SetTrigger("redAttack");
-
+                    animator.SetTrigger("fireball");
                 }
             }
         }
     }
-    /*
+
     public void OnAbility3(InputAction.CallbackContext context) {
-        if (Level >= 3 && spellCaster.queuedSpell == SpellCaster.Spell.None) {
+        if (experienceSystem.Level >= 3) {
             Debug.Log("OnAbility3");
             if (context.started) {
                 if (spellCaster.chosenSpells[1] == SpellCaster.Spell.EarthenSpike) {
@@ -224,45 +213,41 @@ public class PlayerController : MonoBehaviour
                     if (touchingDirections.IsGrounded) {
                         Debug.Log("Cast EarthenSpike");
                         animator.SetTrigger("attack");
-                        animator.SetTrigger("brownAttack");
-                        spellCaster.queuedSpell = SpellCaster.Spell.EarthenSpike;
+                        animator.SetTrigger("earthenSpike");
                     }
                 }
                 else {
                     // Tornado
                     Debug.Log("Cast Tornado");
                     animator.SetTrigger("attack");
-                    animator.SetTrigger("greenAttack");
-                    spellCaster.queuedSpell = SpellCaster.Spell.Tornado;
+                    animator.SetTrigger("tornado");
                 }
             }
         }
     }
 
     public void OnAbility4(InputAction.CallbackContext context) {
-        if (Level >= 4 && spellCaster.queuedSpell == SpellCaster.Spell.None) {
+        if (experienceSystem.Level >= 4) {
             Debug.Log("OnAbility4");
             if (context.started) {
                 if (spellCaster.chosenSpells[2] == SpellCaster.Spell.ArcaneBlast) {
                     // ArcaneBlast
                     Debug.Log("Cast ArcaneBlast");
                     animator.SetTrigger("attack");
-                    animator.SetTrigger("blueAttack");
-                    spellCaster.queuedSpell = SpellCaster.Spell.ArcaneBlast;
+                    animator.SetTrigger("arcaneBlast");
                 }
                 else {
                     // FlameStrike
                     Debug.Log("Cast FlameStrike");
                     animator.SetTrigger("attack");
-                    animator.SetTrigger("redAttack");
-                    spellCaster.queuedSpell = SpellCaster.Spell.FlameStrike;
+                    animator.SetTrigger("flameStrike");
                 }
             }
         }
     }
 
     public void OnAbility5(InputAction.CallbackContext context) {
-        if (Level >= 5 && spellCaster.queuedSpell == SpellCaster.Spell.None) {
+        if (experienceSystem.Level >= 5) {
             Debug.Log("OnAbility5");
             if (context.started) {
                 Debug.Log(spellCaster.chosenSpells[3]);
@@ -270,26 +255,25 @@ public class PlayerController : MonoBehaviour
                     // Phoenix
                     Debug.Log("Cast Phoenix");
                     animator.SetTrigger("attack");
-                    animator.SetTrigger("blueAttack");
-                    spellCaster.queuedSpell = SpellCaster.Spell.Phoenix;
+                    animator.SetTrigger("phoenix");
                 }
                 else {
-                    // Phoenix
+                    // Fire Blade
                     Debug.Log("Cast FireBlade");
                     animator.SetTrigger("attack");
-                    animator.SetTrigger("redAttack");
-                    spellCaster.queuedSpell = SpellCaster.Spell.FireBlade;
+                    animator.SetTrigger("fireBlade");
                 }
             }
         }
     }
-    */
+
 
     public void OnHit(int damage, Vector2 knockback) {
         //spellCaster.queuedSpell = SpellCaster.Spell.None;
         //if(touchingDirections.IsGrounded) damageable.LockVelocity = true;
         rb.velocity = new Vector2(knockback.x, knockback.y != 0 ? knockback.y * 1.5f : rb.velocity.y);
     }
+
 
     public void OnDeath()
     {

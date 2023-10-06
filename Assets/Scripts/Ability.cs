@@ -15,6 +15,7 @@ public class Ability : MonoBehaviour
         abilityBackground.fillAmount = 0;
     }
 
+    /* 
     private void Update()
     {
         if(Input.GetKeyUp(abilityKey) && !isCooldown)
@@ -34,4 +35,5 @@ public class Ability : MonoBehaviour
             }
         }
     }
+    */
 }

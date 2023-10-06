@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 7450217845287780162}
   - component: {fileID: 3673581769313269436}
   - component: {fileID: 4396056298571986736}
+  - component: {fileID: 1801409586238514270}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -165,6 +166,8 @@ MonoBehaviour:
   _isFacingRight: 1
   fireballSound: {fileID: 0}
   magicballSound: {fileID: 0}
+  testMode: 0
+  _xp: 0
 --- !u!114 &8727100003326672096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,6 +499,18 @@ MonoBehaviour:
   projectileLauncher: {fileID: 3673581769313269436}
   maxSpellQueueSize: 2
   chosenSpells: 
+--- !u!114 &1801409586238514270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8066936261001075503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98a51a0c9554e641b403bde4024ce7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4440826550826224784
 PrefabInstance:
   m_ObjectHideFlags: 0
