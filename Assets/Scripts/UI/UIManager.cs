@@ -99,5 +99,9 @@ public class UIManager : MonoBehaviour
         spellbookScreen.SetActive(status);
         Pause(status);
     }
+    public void LevelUp(int level)
+    {
+        Spellbook._instance.LevelUp(level);
+    }
     #endregion
 }

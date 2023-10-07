@@ -91,6 +91,7 @@ public class PlayerController : MonoBehaviour
             _xp += xpToGain;
             while (_xp >= LevelBracket && Level < 5) {
                 _level += 1;
+                uiManager.LevelUp(_level);
             }
         }
     }

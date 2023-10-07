@@ -7,11 +7,12 @@ using UnityEngine.UI;
 public class StatBar : MonoBehaviour
 {
     [SerializeField] private Damageable damageable;
-    private Image content;
+    [SerializeField] private Image healthContent;
+    [SerializeField] private Image xpContent;
 
     private void Start()
     {
-        content = GetComponent<Image>();
+        //content = GetComponent<Image>();
         UpdateStatBar();
         damageable.OnHealthChanged += UpdateStatBar;
     }
@@ -19,10 +20,10 @@ public class StatBar : MonoBehaviour
     private void UpdateStatBar()
     {
         float healthPercentage = (float)damageable.Health / damageable.MaxHealth;
-        content.fillAmount = healthPercentage;
+        healthContent.fillAmount = healthPercentage;
         Color fullHealthColor = Color.green;
         Color lowHealthColor = Color.red;
-        content.color = Color.Lerp(lowHealthColor, fullHealthColor, healthPercentage);
+        healthContent.color = Color.Lerp(lowHealthColor, fullHealthColor, healthPercentage);
     }
 
     private void OnDestroy()
