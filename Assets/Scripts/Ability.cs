@@ -22,8 +22,30 @@ public class Ability //: MonoBehaviour
 
     public void SetUp(int buttonIndex) {
         Transform btn = GameObject.Find("UserInterface").transform.Find("ActionBar").transform.Find("ActionButton1");
+        Image abilityIcon = btn.transform.GetComponent<Image>();
+        if (spell == SpellCaster.Spell.Fireball)
+            abilityIcon.sprite = btn.GetComponent<ImageOptions>().opt2;
+        else if (spell == SpellCaster.Spell.LightningStorm)
+            abilityIcon.sprite = btn.GetComponent<ImageOptions>().opt1;
+        else if (spell == SpellCaster.Spell.EarthenSpike)
+            abilityIcon.sprite = btn.GetComponent<ImageOptions>().opt1;
+        else if (spell == SpellCaster.Spell.Tornado)
+            abilityIcon.sprite = btn.GetComponent<ImageOptions>().opt2;
+        else if (spell == SpellCaster.Spell.ArcaneBlast)
+            abilityIcon.sprite = btn.GetComponent<ImageOptions>().opt1;
+        else if (spell == SpellCaster.Spell.FlameStrike)
+            abilityIcon.sprite = btn.GetComponent<ImageOptions>().opt2;
+        else if (spell == SpellCaster.Spell.Phoenix)
+            abilityIcon.sprite = btn.GetComponent<ImageOptions>().opt1;
+        else if (spell == SpellCaster.Spell.FireBlade)
+            abilityIcon.sprite = btn.GetComponent<ImageOptions>().opt2;
+        abilityIcon.type = Image.Type.Filled;
+        abilityIcon.fillMethod = Image.FillMethod.Radial360;
+        //abilityIcon.fillOrigin = 1;
 
-        imageCooldown = btn.transform.Find("CooldownFade" + buttonIndex).GetComponent<Image>();
+
+        imageCooldown = btn.transform.Find("CooldownFade" + buttonIndex.ToString()).GetComponent<Image>();
+        
         textCooldown = btn.transform.Find("CooldownText" + buttonIndex.ToString()).GetComponent<TMP_Text>();
 
         textCooldown.gameObject.SetActive(false);

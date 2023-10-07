@@ -16,8 +16,13 @@ public class SpellCaster : MonoBehaviour
     [SerializeField] ProjectileLauncher projectileLauncher;
 
 
-    public Ability[] abilities = new Ability[4];
+    public static Ability[] abilities = new Ability[4];
     public List<Spell> chosenSpells = new List<Spell>();
+
+    public Ability[] Abilities {
+        get { return abilities; }
+        set { abilities = value; }
+    }
 
     private IEnumerator coroutine;
 
@@ -166,17 +171,9 @@ public class SpellCaster : MonoBehaviour
 
     private void Awake() {
         animator = GetComponent<Animator>();
-        spellDict.Add(Spell.LightningStorm, lightningStormPrefab);
-        spellDict.Add(Spell.Fireball, fireballPrefab);
-        spellDict.Add(Spell.EarthenSpike, earthenSpikePrefab);
-        spellDict.Add(Spell.Tornado, tornadoPrefab);
-        spellDict.Add(Spell.ArcaneBlast, arcaneBlastPrefab);
-        spellDict.Add(Spell.FireBlade, fireBladePrefab);
-        spellDict.Add(Spell.FlameStrike, flameStrikePrefab);
-        spellDict.Add(Spell.Phoenix, phoenixPrefab);
 
         // manual loading
-        
+        /*
         chosenSpells.Add(Spell.LightningStorm);
         //chosenSpells.Add(Spell.Fireball);
         
@@ -188,57 +185,60 @@ public class SpellCaster : MonoBehaviour
         
         //chosenSpells.Add(Spell.FireBlade);
         chosenSpells.Add(Spell.Phoenix);
-        
-    }
-
-    private void Start() {
-        /*
-        Ability LightningStorm = new Ability(1, 5, Spell.LightningStorm);
-        Ability Fireball = new Ability(1, 4, Spell.Fireball);
-        Ability EarthenSpike = new Ability(2, 5, Spell.EarthenSpike);
-        Ability Tornado = new Ability(2, 3, Spell.Tornado);
-        Ability ArcaenBlast= new Ability(9, 5, Spell.ArcaneBlast);
-        Ability FLameStrike= new Ability(20, 5, Spell.FlameStrike);
-        Ability Phoenix= new Ability(30, 5, Spell.Phoenix);
-        Ability FireBlade= new Ability(7, 5, Spell.FireBlade);
         */
-        SpellCaster.AddSpell(Spell.LightningStorm);
     }
 
     public static void AddSpell(SpellCaster.Spell spell) {
         SpellCaster spellCaster = GameObject.Find("Player").transform.GetComponent<SpellCaster>();
         switch (spell) {
             case Spell.LightningStorm:
-                Ability LightningStorm = new Ability(1, 5, Spell.LightningStorm);
-                spellCaster.abilities[0] = LightningStorm;
+                if (spellCaster.Abilities[0] == null) {
+                    Ability LightningStorm = new Ability(1, 5, Spell.LightningStorm);
+                    spellCaster.Abilities[0] = LightningStorm;
+                }
                 break;
             case Spell.Fireball:
-                Ability Fireball = new Ability(1, 4, Spell.Fireball);
-                spellCaster.abilities[0] = Fireball;
+                if (spellCaster.Abilities[0] == null) {
+                    Ability Fireball = new Ability(1, 4, Spell.Fireball);
+                    spellCaster.Abilities[0] = Fireball;
+                    spellCaster.chosenSpells.Add(spell);
+                }
                 break;
             case Spell.EarthenSpike:
-                Ability EarthenSpike = new Ability(2, 5, Spell.EarthenSpike);
-                spellCaster.abilities[1] = EarthenSpike;
+                if (spellCaster.Abilities[1] == null) {
+                    Ability EarthenSpike = new Ability(2, 5, Spell.EarthenSpike);
+                    spellCaster.Abilities[1] = EarthenSpike;
+                }
                 break;
             case Spell.Tornado:
-                Ability Tornado = new Ability(2, 3, Spell.Tornado);
-                spellCaster.abilities[1] = Tornado;
+                if (spellCaster.Abilities[1] == null) {
+                    Ability Tornado = new Ability(2, 3, Spell.Tornado);
+                    spellCaster.Abilities[1] = Tornado;
+                }
                 break;
             case Spell.ArcaneBlast:
-                Ability ArcaneBlast = new Ability(9, 5, Spell.ArcaneBlast);
-                spellCaster.abilities[2] = ArcaneBlast;
+                if (spellCaster.Abilities[2] == null) {
+                    Ability ArcaneBlast = new Ability(9, 5, Spell.ArcaneBlast);
+                    spellCaster.Abilities[2] = ArcaneBlast;
+                }
                 break;
             case Spell.FlameStrike:
-                Ability FlameStrike = new Ability(20, 5, Spell.FlameStrike);
-                spellCaster.abilities[2] = FlameStrike;
+                if (spellCaster.Abilities[2] == null) {
+                    Ability FlameStrike = new Ability(20, 5, Spell.FlameStrike);
+                    spellCaster.Abilities[2] = FlameStrike;
+                }
                 break;
             case Spell.Phoenix:
-                Ability Phoenix = new Ability(30, 5, Spell.Phoenix);
-                spellCaster.abilities[3] = Phoenix;
+                if (spellCaster.Abilities[3] == null) {
+                    Ability Phoenix = new Ability(30, 5, Spell.Phoenix);
+                    spellCaster.Abilities[3] = Phoenix;
+                }
                 break;
             case Spell.FireBlade:
-                Ability FireBlade = new Ability(7, 5, Spell.FireBlade);
-                spellCaster.abilities[3] = FireBlade;
+                if (spellCaster.Abilities[3] == null) {
+                    Ability FireBlade = new Ability(7, 5, Spell.FireBlade);
+                    spellCaster.Abilities[3] = FireBlade;
+                }
                 break;
             default:
                 break;
@@ -246,28 +246,16 @@ public class SpellCaster : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        abilities[0].UpdateCoolDown();
+        for (int i = 0; i < 4; i++) {
+            if (abilities[i] != null)
+                abilities[i].UpdateCoolDown();
+        }
     }
 
-    public void LoadSpellsFomData(int[] abilities) {
-        if (abilities[0] == 0)
-            chosenSpells.Add(Spell.LightningStorm);
-        else
-            chosenSpells.Add(Spell.Fireball);
-        
-        if (abilities[1] == 0)
-            chosenSpells.Add(Spell.EarthenSpike);
-        else
-            chosenSpells.Add(Spell.Tornado);
-        
-        if (abilities[2] == 0)
-            chosenSpells.Add(Spell.ArcaneBlast);
-        else
-            chosenSpells.Add(Spell.FlameStrike);
-        
-        if (abilities[3] == 0)
-            chosenSpells.Add(Spell.Phoenix);
-        else
-            chosenSpells.Add(Spell.FireBlade);
+    private void Start() {
+        for (int i = 0; i < 4; i++) {
+            if (abilities[i] != null)
+                abilities[i].SetUp(i+1);
+        }
     }
 }

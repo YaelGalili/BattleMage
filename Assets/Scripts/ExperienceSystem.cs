@@ -20,17 +20,25 @@ public class ExperienceSystem : MonoBehaviour
 
     public int LevelBracket {
         get {
-            return _levelBrackets[Unity.Mathematics.math.min(_level - 1, 3)];
+            return _levelBrackets[Unity.Mathematics.math.max(Level - 1, 0)];
         }
     }
 
     public void GainXP(int xpToGain) {
+        Debug.Log("Gained " + xpToGain + "xp");
         if (xpToGain > 0) {
-            _xp += xpToGain;
-            _level = 5;
-
-
+            XP += xpToGain;
+            while(XP > LevelBracket && Level < 5) {
+                Level += 1;
+                Debug.Log("Level up!");
+            }
         }
+
+
+    }
+
+    private void FixedUpdate() {
+        //Debug.Log(Level);
     }
 
 }

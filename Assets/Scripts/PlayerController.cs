@@ -101,12 +101,10 @@ public class PlayerController : MonoBehaviour {
         touchingDirections = GetComponent<TouchingDirections>();
         experienceSystem = GetComponent<ExperienceSystem>();
         uiManager = FindObjectOfType<UIManager>();
+
+        experienceSystem.GainXP(50);
     }
 
-    private void Start() {
-        if (testMode)
-            experienceSystem.GainXP(400);
-    }
 
     private void FixedUpdate() {
         // move
@@ -188,8 +186,8 @@ public class PlayerController : MonoBehaviour {
     public void OnAbility2(InputAction.CallbackContext context) {
         if (experienceSystem.Level >= 2) {
             Debug.Log("OnAbility2");
-            if (context.started) {
-                if (spellCaster.chosenSpells[0] == SpellCaster.Spell.LightningStorm) {
+            if (context.started && spellCaster.Abilities[0] != null) {
+                if (spellCaster.Abilities[0].spell == SpellCaster.Spell.LightningStorm) {
                     // Lightning Storm
                     Debug.Log("Cast LightningStorm");
                     animator.SetTrigger("attack");
@@ -208,8 +206,8 @@ public class PlayerController : MonoBehaviour {
     public void OnAbility3(InputAction.CallbackContext context) {
         if (experienceSystem.Level >= 3) {
             Debug.Log("OnAbility3");
-            if (context.started) {
-                if (spellCaster.chosenSpells[1] == SpellCaster.Spell.EarthenSpike) {
+            if (context.started && spellCaster.Abilities[1] != null) {
+                if (spellCaster.Abilities[1].spell == SpellCaster.Spell.EarthenSpike) {
                     // EarthenSpike
                     if (touchingDirections.IsGrounded) {
                         Debug.Log("Cast EarthenSpike");
@@ -230,8 +228,8 @@ public class PlayerController : MonoBehaviour {
     public void OnAbility4(InputAction.CallbackContext context) {
         if (experienceSystem.Level >= 4) {
             Debug.Log("OnAbility4");
-            if (context.started) {
-                if (spellCaster.chosenSpells[2] == SpellCaster.Spell.ArcaneBlast) {
+            if (context.started && spellCaster.Abilities[2] != null) {
+                if (spellCaster.Abilities[2].spell == SpellCaster.Spell.ArcaneBlast) {
                     // ArcaneBlast
                     Debug.Log("Cast ArcaneBlast");
                     animator.SetTrigger("attack");
@@ -250,9 +248,8 @@ public class PlayerController : MonoBehaviour {
     public void OnAbility5(InputAction.CallbackContext context) {
         if (experienceSystem.Level >= 5) {
             Debug.Log("OnAbility5");
-            if (context.started) {
-                Debug.Log(spellCaster.chosenSpells[3]);
-                if (spellCaster.chosenSpells[3] == SpellCaster.Spell.Phoenix) {
+            if (context.started && spellCaster.Abilities[3] != null) {
+                if (spellCaster.Abilities[3].spell == SpellCaster.Spell.Phoenix) {
                     // Phoenix
                     Debug.Log("Cast Phoenix");
                     animator.SetTrigger("attack");

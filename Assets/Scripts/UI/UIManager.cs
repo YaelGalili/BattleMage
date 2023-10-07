@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -12,6 +13,16 @@ public class UIManager : MonoBehaviour
 
     [Header("Spellbook")]
     [SerializeField] private GameObject spellbookScreen;
+
+    [SerializeField] GameObject FireballButton;
+    [SerializeField] GameObject LightningStormButton;
+    [SerializeField] GameObject TornadoButton;
+    [SerializeField] GameObject EarthenSpikeButton;
+    [SerializeField] GameObject ArcaneBlastButton;
+    [SerializeField] GameObject FlameStrikeButton;
+    [SerializeField] GameObject PhoenixButton;
+    [SerializeField] GameObject FireBladeButton;
+
 
     private void Awake()
     {
@@ -96,7 +107,57 @@ public class UIManager : MonoBehaviour
     #region Spellbook
     public void ShowSpellbook(bool status)
     {
+        ExperienceSystem expSys = GameObject.Find("Player").GetComponent<ExperienceSystem>();
+        SpellCaster spellCaster = GameObject.Find("Player").GetComponent<SpellCaster>();
         spellbookScreen.SetActive(status);
+
+        if (expSys.Level < 5) {
+            PhoenixButton.GetComponent<Button>().interactable = false;
+            FireBladeButton.GetComponent<Button>().interactable = false;
+        }
+        if (expSys.Level < 4) {
+            ArcaneBlastButton.GetComponent<Button>().interactable = false;
+            FlameStrikeButton.GetComponent<Button>().interactable = false;
+        }
+        if (expSys.Level < 3) {
+            EarthenSpikeButton.GetComponent<Button>().interactable = false;
+            TornadoButton.GetComponent<Button>().interactable = false;
+        }
+        if (expSys.Level < 2) {
+            FireballButton.GetComponent<Button>().interactable = false;
+            LightningStormButton.GetComponent<Button>().interactable = false;
+        }
+
+
+        if (spellCaster.Abilities[0] != null) {
+            if (spellCaster.Abilities[0].spell == SpellCaster.Spell.LightningStorm) {
+                FireballButton.GetComponent<Button>().interactable = false;
+            }
+            if (spellCaster.Abilities[0].spell == SpellCaster.Spell.Fireball)
+                LightningStormButton.GetComponent<Button>().interactable = false;
+        }
+        if (spellCaster.Abilities[1] != null) {
+            if (spellCaster.Abilities[1].spell == SpellCaster.Spell.Tornado) {
+                EarthenSpikeButton.GetComponent<Button>().interactable = false;
+            }
+            if (spellCaster.Abilities[1].spell == SpellCaster.Spell.EarthenSpike)
+                TornadoButton.GetComponent<Button>().interactable = false;
+        }
+        if (spellCaster.Abilities[2] != null) {
+            if (spellCaster.Abilities[2].spell == SpellCaster.Spell.FlameStrike) {
+                ArcaneBlastButton.GetComponent<Button>().interactable = false;
+            }
+            if (spellCaster.Abilities[2].spell == SpellCaster.Spell.ArcaneBlast)
+                FlameStrikeButton.GetComponent<Button>().interactable = false;
+        }
+        if (spellCaster.Abilities[3] != null) {
+            if (spellCaster.Abilities[3].spell == SpellCaster.Spell.FireBlade) {
+                PhoenixButton.GetComponent<Button>().interactable = false;
+            }
+            if (spellCaster.Abilities[3].spell == SpellCaster.Spell.Phoenix)
+                FireBladeButton.GetComponent<Button>().interactable = false;
+        }
+
         Pause(status);
     }
     #endregion
