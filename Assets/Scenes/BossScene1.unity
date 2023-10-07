@@ -1368,7 +1368,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2481255203537527731, guid: eb8da68adefbd6f4dbbab1bf9988a826, type: 3}
       propertyPath: _health
-      value: 10
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481255203537527731, guid: eb8da68adefbd6f4dbbab1bf9988a826, type: 3}
+      propertyPath: _maxHealth
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 2842786449304402903, guid: eb8da68adefbd6f4dbbab1bf9988a826, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x

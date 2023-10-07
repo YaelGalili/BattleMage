@@ -101,8 +101,6 @@ public class PlayerController : MonoBehaviour {
         touchingDirections = GetComponent<TouchingDirections>();
         experienceSystem = GetComponent<ExperienceSystem>();
         uiManager = FindObjectOfType<UIManager>();
-
-        experienceSystem.GainXP(50);
     }
 
 

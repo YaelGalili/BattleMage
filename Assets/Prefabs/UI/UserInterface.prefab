@@ -918,10 +918,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 0.75, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.8867924, b: 0.67401934, a: 1}
+    m_PressedColor: {r: 0.12878752, g: 1, b: 0, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.29411766, g: 0.29411766, b: 0.29411766, a: 1}
+    m_DisabledColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
     m_ColorMultiplier: 5
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -977,6 +977,7 @@ GameObject:
   - component: {fileID: 844637783264456207}
   - component: {fileID: 1105762582392716866}
   - component: {fileID: 294531163778440595}
+  - component: {fileID: 5703217147391748835}
   m_Layer: 5
   m_Name: FlameStrikeSelect
   m_TagString: Untagged
@@ -1064,10 +1065,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 0.75, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.8867924, b: 0.67401934, a: 1}
+    m_PressedColor: {r: 0.12878752, g: 1, b: 0, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
+    m_DisabledColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
     m_ColorMultiplier: 5
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1085,7 +1086,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1105762582392716866}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5703217147391748835}
+        m_TargetAssemblyTypeName: AddSpell, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5703217147391748835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461197918520080273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9391155e1bd19a64a9def40a2f966c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spell: 7
 --- !u!1 &1878168624769143365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,6 +1124,7 @@ GameObject:
   - component: {fileID: 5674628369242608584}
   - component: {fileID: 7524121538861340563}
   - component: {fileID: 2205992537146250126}
+  - component: {fileID: 8151719142954366968}
   m_Layer: 5
   m_Name: FireBladeSelect
   m_TagString: Untagged
@@ -1185,10 +1212,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 0.75, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.8867924, b: 0.67401934, a: 1}
+    m_PressedColor: {r: 0.12878752, g: 1, b: 0, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
+    m_DisabledColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
     m_ColorMultiplier: 5
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1206,7 +1233,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7524121538861340563}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8151719142954366968}
+        m_TargetAssemblyTypeName: AddSpell, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8151719142954366968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878168624769143365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9391155e1bd19a64a9def40a2f966c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spell: 8
 --- !u!1 &2178440912589397414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,6 +1857,7 @@ GameObject:
   - component: {fileID: 154881562045645735}
   - component: {fileID: 1187549043400788489}
   - component: {fileID: 1596526908540438938}
+  - component: {fileID: 2357095045012181796}
   m_Layer: 5
   m_Name: EarthenSpikeSelect
   m_TagString: Untagged
@@ -1892,10 +1945,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 0.75, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.8867924, b: 0.67401934, a: 1}
+    m_PressedColor: {r: 0.12878752, g: 1, b: 0, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
+    m_DisabledColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
     m_ColorMultiplier: 5
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1913,7 +1966,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1187549043400788489}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2357095045012181796}
+        m_TargetAssemblyTypeName: AddSpell, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2357095045012181796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4283880903497454244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9391155e1bd19a64a9def40a2f966c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spell: 3
 --- !u!1 &4349988025524457495
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,7 +2051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8251527297426907080
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2457,6 +2535,7 @@ GameObject:
   - component: {fileID: 3608982625051652056}
   - component: {fileID: 8019906000951713465}
   - component: {fileID: 2431467455543089476}
+  - component: {fileID: 6292059674464519189}
   m_Layer: 5
   m_Name: PhoenixSelect
   m_TagString: Untagged
@@ -2544,10 +2623,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 0.75, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.8867924, b: 0.67401934, a: 1}
+    m_PressedColor: {r: 0.12878752, g: 1, b: 0, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
+    m_DisabledColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
     m_ColorMultiplier: 5
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2565,7 +2644,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8019906000951713465}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6292059674464519189}
+        m_TargetAssemblyTypeName: AddSpell, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6292059674464519189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6227548227001130237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9391155e1bd19a64a9def40a2f966c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spell: 6
 --- !u!1 &6308154704040715016
 GameObject:
   m_ObjectHideFlags: 0
@@ -8390,6 +8494,7 @@ GameObject:
   - component: {fileID: 3239045823777508906}
   - component: {fileID: 6823115826726890842}
   - component: {fileID: 2169129776955955261}
+  - component: {fileID: 8430250641989257848}
   m_Layer: 5
   m_Name: LightningStormSelect
   m_TagString: Untagged
@@ -8477,10 +8582,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 0.75, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.8867924, b: 0.67401934, a: 1}
+    m_PressedColor: {r: 0.12878752, g: 1, b: 0, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
+    m_DisabledColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
     m_ColorMultiplier: 5
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -8498,7 +8603,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6823115826726890842}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8430250641989257848}
+        m_TargetAssemblyTypeName: AddSpell, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8430250641989257848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6688660251896355333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9391155e1bd19a64a9def40a2f966c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spell: 1
 --- !u!1 &6712882716272384421
 GameObject:
   m_ObjectHideFlags: 0
@@ -8646,6 +8776,7 @@ GameObject:
   - component: {fileID: 4488055916611362081}
   - component: {fileID: 1364139954634087108}
   - component: {fileID: 6046611316197192573}
+  - component: {fileID: 6109859124391081672}
   m_Layer: 5
   m_Name: ArcaneBlastSelect
   m_TagString: Untagged
@@ -8733,10 +8864,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 0.75, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.8867924, b: 0.67401934, a: 1}
+    m_PressedColor: {r: 0.12878752, g: 1, b: 0, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
+    m_DisabledColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
     m_ColorMultiplier: 5
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -8754,7 +8885,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1364139954634087108}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6109859124391081672}
+        m_TargetAssemblyTypeName: AddSpell, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6109859124391081672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6759243761096437748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9391155e1bd19a64a9def40a2f966c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spell: 5
 --- !u!1 &6787181770959042991
 GameObject:
   m_ObjectHideFlags: 0
@@ -9130,6 +9286,7 @@ GameObject:
   - component: {fileID: 4359916897036810931}
   - component: {fileID: 352417726725675403}
   - component: {fileID: 1653690891523029205}
+  - component: {fileID: 422592570436847782}
   m_Layer: 5
   m_Name: TonradoSelect
   m_TagString: Untagged
@@ -9217,10 +9374,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 0.75, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.8867924, b: 0.67401934, a: 1}
+    m_PressedColor: {r: 0.12878752, g: 1, b: 0, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
+    m_DisabledColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
     m_ColorMultiplier: 5
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -9238,7 +9395,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 352417726725675403}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 422592570436847782}
+        m_TargetAssemblyTypeName: AddSpell, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &422592570436847782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214034601030000907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9391155e1bd19a64a9def40a2f966c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spell: 4
 --- !u!1 &7226645235907751608
 GameObject:
   m_ObjectHideFlags: 0

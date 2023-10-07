@@ -349,8 +349,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 3
   attackZone: {fileID: 3971338083468027903}
+  startDirection: {x: 1, y: 0}
+  xpValue: 30
   _hasTarget: 0
-  walkDirectionVector: {x: 1, y: 0}
 --- !u!1 &8358874962203922133
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,7 +20,6 @@ public class ExpBar : MonoBehaviour
 
     private void UpdateXpBar() {
         float expPercentage = (float)experienceSystem.XP / experienceSystem.LevelBracket;
-        Debug.Log(expPercentage);
         content.fillAmount = expPercentage;
     }
 

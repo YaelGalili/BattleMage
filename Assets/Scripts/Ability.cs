@@ -21,7 +21,7 @@ public class Ability //: MonoBehaviour
     }
 
     public void SetUp(int buttonIndex) {
-        Transform btn = GameObject.Find("UserInterface").transform.Find("ActionBar").transform.Find("ActionButton1");
+        Transform btn = GameObject.Find("UserInterface").transform.Find("ActionBar").transform.Find("ActionButton" + buttonIndex.ToString());
         Image abilityIcon = btn.transform.GetComponent<Image>();
         if (spell == SpellCaster.Spell.Fireball)
             abilityIcon.sprite = btn.GetComponent<ImageOptions>().opt2;

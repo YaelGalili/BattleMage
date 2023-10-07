@@ -539,7 +539,7 @@ MonoBehaviour:
   walkSpeed: 5
   attackZone: {fileID: 8777254539027313496}
   startDirection: {x: 1, y: 0}
-  xpValue: 5
+  xpValue: 100
   _hasTarget: 0
   cliffDetectionZone: {fileID: 4692242489943883578}
 --- !u!114 &6698126730961919611

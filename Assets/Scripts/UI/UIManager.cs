@@ -111,22 +111,20 @@ public class UIManager : MonoBehaviour
         SpellCaster spellCaster = GameObject.Find("Player").GetComponent<SpellCaster>();
         spellbookScreen.SetActive(status);
 
-        if (expSys.Level < 5) {
-            PhoenixButton.GetComponent<Button>().interactable = false;
-            FireBladeButton.GetComponent<Button>().interactable = false;
-        }
-        if (expSys.Level < 4) {
-            ArcaneBlastButton.GetComponent<Button>().interactable = false;
-            FlameStrikeButton.GetComponent<Button>().interactable = false;
-        }
-        if (expSys.Level < 3) {
-            EarthenSpikeButton.GetComponent<Button>().interactable = false;
-            TornadoButton.GetComponent<Button>().interactable = false;
-        }
-        if (expSys.Level < 2) {
-            FireballButton.GetComponent<Button>().interactable = false;
-            LightningStormButton.GetComponent<Button>().interactable = false;
-        }
+        PhoenixButton.GetComponent<Button>().interactable = expSys.Level >= 5;
+        FireBladeButton.GetComponent<Button>().interactable = expSys.Level >= 5;
+        
+
+        ArcaneBlastButton.GetComponent<Button>().interactable = expSys.Level >= 4;
+        FlameStrikeButton.GetComponent<Button>().interactable = expSys.Level >= 4;
+
+        EarthenSpikeButton.GetComponent<Button>().interactable = expSys.Level >= 3;
+        TornadoButton.GetComponent<Button>().interactable = expSys.Level >= 3;
+        
+
+        FireballButton.GetComponent<Button>().interactable = expSys.Level >= 2;
+        LightningStormButton.GetComponent<Button>().interactable = expSys.Level >= 2;
+        
 
 
         if (spellCaster.Abilities[0] != null) {

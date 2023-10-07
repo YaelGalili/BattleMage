@@ -6434,7 +6434,7 @@ MonoBehaviour:
   portalPrefab: {fileID: 4151715340789499607, guid: 630b5c49794369f4c95ba7a92fda0f7b, type: 3}
   portalPosition: {x: 0, y: 0, z: 0}
   timerText: {fileID: 0}
-  remainingTime: 5
+  remainingTime: 120
 --- !u!1 &2080385150
 GameObject:
   m_ObjectHideFlags: 0
