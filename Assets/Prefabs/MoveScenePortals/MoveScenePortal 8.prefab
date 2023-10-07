@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4151715340789499604}
   - component: {fileID: 4151715340789499602}
   m_Layer: 17
-  m_Name: MoveScenePortal 1
+  m_Name: MoveScenePortal 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,4 +139,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40bd7adcf5341294da01d0fb9b47912f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: 1
+  sceneBuildIndex: 8

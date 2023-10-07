@@ -27,7 +27,7 @@ public class ExperienceSystem : MonoBehaviour
     public void GainXP(int xpToGain) {
         if (xpToGain > 0) {
             _xp += xpToGain;
-            _level = 3;
+            _level = 5;
 
 
         }

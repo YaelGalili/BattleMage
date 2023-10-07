@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
+
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
 
 public class PlayerController : MonoBehaviour {
@@ -278,5 +279,11 @@ public class PlayerController : MonoBehaviour {
     public void OnDeath()
     {
         uiManager.GameOver();
+    }
+
+    public void OnSaveGame(InputAction.CallbackContext context) {
+        Debug.Log("OnSaveGame");
+        if (context.started) 
+            SaveSystem.SaveGame(experienceSystem.XP, experienceSystem.Level, SceneManager.GetActiveScene().buildIndex, spellCaster.chosenSpells);
     }
 }

@@ -129,10 +129,6 @@ public class SpellCaster : MonoBehaviour
         return currSpell;
     }
 
-    public void CastSpell() {
-
-    }
-
     public void CastFireBall() {
         projectileLauncher.LaunchProjectile(ProjectileLauncher.ProjectileType.Fireball);
     }
@@ -143,6 +139,7 @@ public class SpellCaster : MonoBehaviour
 
 
     public void CastLightningStorm() {
+        abilities[0].StartCooldown();
         CastAtEnemies(lightningStormPrefab, 7, 2);
     }
 
@@ -178,9 +175,8 @@ public class SpellCaster : MonoBehaviour
         spellDict.Add(Spell.FlameStrike, flameStrikePrefab);
         spellDict.Add(Spell.Phoenix, phoenixPrefab);
 
-
-
-
+        // manual loading
+        
         chosenSpells.Add(Spell.LightningStorm);
         //chosenSpells.Add(Spell.Fireball);
         
@@ -190,8 +186,67 @@ public class SpellCaster : MonoBehaviour
         chosenSpells.Add(Spell.FlameStrike);
         //chosenSpells.Add(Spell.ArcaneBlast);
         
-        chosenSpells.Add(Spell.FireBlade);
-        //chosenSpells.Add(Spell.Phoenix);
+        //chosenSpells.Add(Spell.FireBlade);
+        chosenSpells.Add(Spell.Phoenix);
+        
+    }
+
+    private void Start() {
+        /*
+        Ability LightningStorm = new Ability(1, 5, Spell.LightningStorm);
+        Ability Fireball = new Ability(1, 4, Spell.Fireball);
+        Ability EarthenSpike = new Ability(2, 5, Spell.EarthenSpike);
+        Ability Tornado = new Ability(2, 3, Spell.Tornado);
+        Ability ArcaenBlast= new Ability(9, 5, Spell.ArcaneBlast);
+        Ability FLameStrike= new Ability(20, 5, Spell.FlameStrike);
+        Ability Phoenix= new Ability(30, 5, Spell.Phoenix);
+        Ability FireBlade= new Ability(7, 5, Spell.FireBlade);
+        */
+        SpellCaster.AddSpell(Spell.LightningStorm);
+    }
+
+    public static void AddSpell(SpellCaster.Spell spell) {
+        SpellCaster spellCaster = GameObject.Find("Player").transform.GetComponent<SpellCaster>();
+        switch (spell) {
+            case Spell.LightningStorm:
+                Ability LightningStorm = new Ability(1, 5, Spell.LightningStorm);
+                spellCaster.abilities[0] = LightningStorm;
+                break;
+            case Spell.Fireball:
+                Ability Fireball = new Ability(1, 4, Spell.Fireball);
+                spellCaster.abilities[0] = Fireball;
+                break;
+            case Spell.EarthenSpike:
+                Ability EarthenSpike = new Ability(2, 5, Spell.EarthenSpike);
+                spellCaster.abilities[1] = EarthenSpike;
+                break;
+            case Spell.Tornado:
+                Ability Tornado = new Ability(2, 3, Spell.Tornado);
+                spellCaster.abilities[1] = Tornado;
+                break;
+            case Spell.ArcaneBlast:
+                Ability ArcaneBlast = new Ability(9, 5, Spell.ArcaneBlast);
+                spellCaster.abilities[2] = ArcaneBlast;
+                break;
+            case Spell.FlameStrike:
+                Ability FlameStrike = new Ability(20, 5, Spell.FlameStrike);
+                spellCaster.abilities[2] = FlameStrike;
+                break;
+            case Spell.Phoenix:
+                Ability Phoenix = new Ability(30, 5, Spell.Phoenix);
+                spellCaster.abilities[3] = Phoenix;
+                break;
+            case Spell.FireBlade:
+                Ability FireBlade = new Ability(7, 5, Spell.FireBlade);
+                spellCaster.abilities[3] = FireBlade;
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void FixedUpdate() {
+        abilities[0].UpdateCoolDown();
     }
 
     public void LoadSpellsFomData(int[] abilities) {

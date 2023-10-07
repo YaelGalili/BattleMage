@@ -16,6 +16,8 @@ public class SaveLoadGameManager : MonoBehaviour
     public static void Load() {
         SaveData data = SaveSystem.LoadGame();
 
+        SceneManager.LoadScene(data.lastSceneIndex);
+        /*
         GameObject player = GameObject.Find("Player");
         ExperienceSystem expSystem = player.GetComponent<ExperienceSystem>();
         SpellCaster spellCaster = player.GetComponent<SpellCaster>();
@@ -23,6 +25,6 @@ public class SaveLoadGameManager : MonoBehaviour
         expSystem.Level = data.level;
         expSystem.XP = data.xp;
 
-        spellCaster.LoadSpellsFomData(data.abilities);
+        spellCaster.LoadSpellsFomData(data.abilities);*/
     }
 }
