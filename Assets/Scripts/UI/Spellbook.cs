@@ -26,6 +26,7 @@ public class Spellbook : MonoBehaviour
         {
             _instance = this;
         }
+        //spellsButtons2[0].onClick = 
     }
 
     private void Start()

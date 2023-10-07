@@ -17,6 +17,7 @@ public class SpellCaster : MonoBehaviour
     [SerializeField] private int maxSpellQueueSize = 2;
 
     public List<Spell> chosenSpells = new List<Spell>();
+    public Spell[] abilities = new Spell[4];
 
     private Queue<Spell> spellQueue = new Queue<Spell>();
     private Spell queuedSpell;
@@ -36,6 +37,7 @@ public class SpellCaster : MonoBehaviour
         FlameStrike,
         FireBlade
     }
+
     private Dictionary<Spell, GameObject> spellDict = new Dictionary<Spell, GameObject>();
     
 
@@ -204,5 +206,6 @@ public class SpellCaster : MonoBehaviour
         
         chosenSpells.Add(Spell.FireBlade);
         //chosenSpells.Add(Spell.Phoenix);
+        abilities[0] = new Ability();
     }
 }
