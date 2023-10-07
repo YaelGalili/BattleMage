@@ -31,11 +31,8 @@ public class Attack : MonoBehaviour
                 if (disableOnHit)
                     _enabled = false;
                 Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
-                Debug.Log(deliveredKnockback.x);
                 // damage the target
                 bool gotHit = damageable.Hit(attackDamage, deliveredKnockback);
-                if (gotHit)
-                    Debug.Log(collision.name + " hit for " + attackDamage);
             }
         }
     }
@@ -50,8 +47,6 @@ public class Attack : MonoBehaviour
             // check if can be damaged
             Damageable damageable = collision.GetComponent<Damageable>();
 
-
-
             if (damageable != null) {
                 if (disableOnHit)
                     _enabled = false;
@@ -59,8 +54,6 @@ public class Attack : MonoBehaviour
 
                 // damage the target
                 bool gotHit = damageable.Hit(attackDamage, deliveredKnockback);
-                if (gotHit)
-                    Debug.Log(collision.name + " hit for " + attackDamage);
             }
         }
     }

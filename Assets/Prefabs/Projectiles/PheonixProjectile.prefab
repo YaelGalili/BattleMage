@@ -78,7 +78,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableOnHit: 0
   target: {fileID: 0}
-  attackDamage: 120
+  attackOnStay: 0
+  attackDamage: 20
   knockback: {x: 0, y: 0}
 --- !u!60 &4094679483652625021
 PolygonCollider2D:
@@ -128,6 +129,7 @@ GameObject:
   - component: {fileID: 5531202207261454848}
   - component: {fileID: 3365295388139510104}
   - component: {fileID: 8283017174863333373}
+  - component: {fileID: 8264643571153676770}
   m_Layer: 15
   m_Name: PheonixProjectile
   m_TagString: Untagged
@@ -291,4 +293,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32a643ea3e6bf64b85ce8f40d425999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToRemove: 3
+  timeToRemove: 30
+--- !u!114 &8264643571153676770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8605983028042800406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64040643b227bbc428399e8c8c1865bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interval: 6
+  range: 1000

@@ -59,7 +59,7 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.5689899, y: 0.29503077}
-      - {x: 0.14568125, y: 0.0688864}
+      - {x: -0.20382288, y: -0.15096268}
       - {x: 0.29148227, y: -0.4915043}
       - {x: 0.85899806, y: -0.31272274}
       - {x: 0.80700344, y: -0.08780497}
@@ -79,7 +79,7 @@ MonoBehaviour:
   disableOnHit: 0
   target: {fileID: 0}
   attackOnStay: 1
-  attackDamage: 10
+  attackDamage: 5
   knockback: {x: 2, y: 2}
 --- !u!1 &2178365820051138493
 GameObject:

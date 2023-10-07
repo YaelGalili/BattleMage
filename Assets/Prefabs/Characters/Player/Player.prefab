@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 7450217845287780162}
   - component: {fileID: 3673581769313269436}
   - component: {fileID: 4396056298571986736}
+  - component: {fileID: 1801409586238514270}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -165,6 +166,7 @@ MonoBehaviour:
   _isFacingRight: 1
   fireballSound: {fileID: 0}
   magicballSound: {fileID: 0}
+  testMode: 0
 --- !u!114 &8727100003326672096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,6 +348,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: bb3d9598-0805-4eb9-8bd5-2a963ffb273b
     m_ActionName: Player/Ability5[/Keyboard/5,/Keyboard/numpad5]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8301834737158562945}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnSaveGame
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a275a5bc-fd88-4a98-9676-555683cf45b1
+    m_ActionName: Player/SaveGame[/Keyboard/f5]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -494,8 +512,19 @@ MonoBehaviour:
   phoenixPrefab: {fileID: 8605983028042800406, guid: 4823f2a8b1a816543bfb66cd20b280d7, type: 3}
   enemyDetectionZone: {fileID: 6215351532802370844}
   projectileLauncher: {fileID: 3673581769313269436}
-  maxSpellQueueSize: 2
   chosenSpells: 
+--- !u!114 &1801409586238514270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8066936261001075503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98a51a0c9554e641b403bde4024ce7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4440826550826224784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -546,6 +575,10 @@ PrefabInstance:
     - target: {fileID: 513760096521981486, guid: 380c718d839a5f94a9caf57d04b7d613, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565890424806248881, guid: 380c718d839a5f94a9caf57d04b7d613, type: 3}
+      propertyPath: m_Size.y
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8832469587801436421, guid: 380c718d839a5f94a9caf57d04b7d613, type: 3}
       propertyPath: m_Name

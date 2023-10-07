@@ -78,7 +78,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableOnHit: 0
   target: {fileID: 0}
-  attackDamage: 20
+  attackOnStay: 0
+  attackDamage: 30
   knockback: {x: 0, y: 10}
 --- !u!60 &4094679483652625021
 PolygonCollider2D:

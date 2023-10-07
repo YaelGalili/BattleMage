@@ -198,7 +198,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.17565072, y: -0.66518426}
+  m_Offset: {x: -0.13066196, y: -0.4582349}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -209,7 +209,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.149763, y: 2.9045463}
+  m_Size: {x: 6.2397404, y: 3.318445}
   m_EdgeRadius: 0
 --- !u!114 &8777254539027313496
 MonoBehaviour:
@@ -407,6 +407,7 @@ GameObject:
   - component: {fileID: 6698126730961919611}
   - component: {fileID: 2976874019264034730}
   - component: {fileID: 2481255203537527731}
+  - component: {fileID: 7059274498891664288}
   m_Layer: 8
   m_Name: GoblinBoss
   m_TagString: Untagged
@@ -424,7 +425,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.44, y: -2.54, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2900685634540434896}
   - {fileID: 7506538549469975881}
@@ -537,8 +538,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 5
   attackZone: {fileID: 8777254539027313496}
+  startDirection: {x: 1, y: 0}
+  xpValue: 5
   _hasTarget: 0
-  walkDirectionVector: {x: 1, y: 0}
   cliffDetectionZone: {fileID: 4692242489943883578}
 --- !u!114 &6698126730961919611
 MonoBehaviour:
@@ -622,8 +624,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _maxHealth: 1000
-  _health: 1000
+  _maxHealth: 600
+  _health: 600
   _isAlive: 1
   isInvincible: 0
   invincibilityTime: 0.25
+--- !u!114 &7059274498891664288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5830200701917066010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b7c217db05bab44a7f0e41ae43ff9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 2

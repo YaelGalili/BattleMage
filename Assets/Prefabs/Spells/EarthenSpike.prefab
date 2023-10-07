@@ -48,7 +48,7 @@ MonoBehaviour:
   disableOnHit: 1
   target: {fileID: 0}
   attackOnStay: 0
-  attackDamage: 60
+  attackDamage: 70
   knockback: {x: 8, y: 10}
 --- !u!60 &8522103728766761153
 PolygonCollider2D:
@@ -213,7 +213,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &5725299787907635747
 MonoBehaviour:
   m_ObjectHideFlags: 0

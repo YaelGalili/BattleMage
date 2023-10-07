@@ -9,6 +9,30 @@ EditorBuildSettings:
     path: Assets/Scenes/EnemyScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: e976c63ed1ea1404a9d5848d369b1347
+  - enabled: 1
+    path: Assets/Scenes/TutorialScene.unity
+    guid: 869e0d0350292ae41abc2e2b126e5421
+  - enabled: 1
+    path: Assets/Scenes/AdventureScene1.unity
+    guid: f1d271aec6cd2d74ba5d6612ac2de9c4
+  - enabled: 1
+    path: Assets/Scenes/SurviveClockScene1.unity
+    guid: 3f5ccce03d855a54f836730f62be5353
+  - enabled: 1
+    path: Assets/Scenes/AdventureScene2.unity
+    guid: 224bfb25fb436f045aa92fb9b2efe5be
+  - enabled: 1
+    path: Assets/Scenes/BossScene1.unity
+    guid: 507210970a6de044dbd32fc9401107cd
+  - enabled: 1
+    path: Assets/Scenes/SurviveClockScene2.unity
+    guid: 6d6d2964b69a19646819182cdcc95acd
+  - enabled: 1
+    path: Assets/Scenes/AdventureScene3.unity
+    guid: 6fcf3acf6f9dee9468dfade99e415c76
+  - enabled: 1
     path: Assets/Scenes/BossScene2.unity
     guid: 47e89f1bd961db944aa5e9ae51ffe8f2
   m_configObjects: {}

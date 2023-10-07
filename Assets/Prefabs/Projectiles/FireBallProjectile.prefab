@@ -132,10 +132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9198ce71a1413b34f8544d5b711e30b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
+  damage: 60
   knockback: {x: 4, y: 0}
   moveSpeed: {x: 15, y: 0}
   hitPosition: {fileID: 7755975681808725318}
+  pierceEnemies: 0
 --- !u!95 &7877073897398363206
 Animator:
   serializedVersion: 5
